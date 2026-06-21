@@ -2,7 +2,13 @@
 
 Application web autonome (un seul fichier `index.html`, aucune dépendance, aucun serveur requis) qui regroupe un guide complet + un livre de recettes Ninja Creami **éditable** avec calcul nutritionnel automatique.
 
-## Lancer l'app
+## 🔗 En ligne
+
+**https://ninja-creami-app.vercel.app**
+
+Dépôt : https://github.com/Decayuki/ninja-creami-guide
+
+## Lancer l'app en local
 
 Ouvre simplement `index.html` dans un navigateur (double-clic). Tout est local. Les images sont dans `images/`.
 

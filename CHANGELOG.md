@@ -1,5 +1,12 @@
 # Changelog — Le Guide Ninja Creami
 
+## v3.1 — Outils & déploiement (2026-06-21)
+- **Objectif nutritionnel inverse** : « je veux X g de protéines / kcal / glucides / lipides → quelle portion ? » directement dans la modale.
+- **Export / Import JSON** des recettes (sauvegarde et partage).
+- **Responsive design** complet (breakpoints 780 px et 480 px, hero/modale/édition adaptés mobile).
+- Favicon + métadonnées Open Graph.
+- **Déploiement Vercel** : https://ninja-creami-app.vercel.app · dépôt GitHub Decayuki/ninja-creami-guide.
+
 ## v3 — Mini-app éditable (2026-06-21)
 Passage en vraie mini-app.
 - **Modale recette** au clic, avec **deux onglets** : 🇫🇷 Version France (par défaut) / 🇺🇸 Recette originale.
