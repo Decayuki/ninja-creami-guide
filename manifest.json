@@ -1,0 +1,16 @@
+{
+  "name": "Le Guide Ninja Creami",
+  "short_name": "Creami",
+  "description": "27 recettes éditables, macros recalculées à la portion, équivalents FR, liste de courses.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbf6f0",
+  "theme_color": "#c0506a",
+  "lang": "fr",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

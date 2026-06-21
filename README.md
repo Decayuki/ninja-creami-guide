@@ -21,8 +21,16 @@ Ouvre simplement `index.html` dans un navigateur (double-clic). Tout est local. 
 
 ### Recettes (le cœur)
 - **27 recettes** catégorisées (sportive, post-workout, healthy, basses cal, kids, sorbet, vegan, gourmand, café, petit-déj), issues de 4 vidéos + recherche web.
-- **Pills multi-catégories** (cumulables) + **tri** (protéines/100 g, calories ↑/↓, A→Z) + **recherche** (nom ou ingrédient).
+- **Pills multi-catégories** (cumulables) + **tri** (protéines/100 g, calories ↑/↓, A→Z) + **recherche** (insensible aux accents : « pasteque » trouve « pastèque »).
+- **Filtres rapides** : ★ Favoris · 🍦 Mes recettes · 💪 Protéiné (≥10 g/100 g) · 🪶 Léger (≤90 kcal/100 g).
+- **Favoris** (★ sur chaque carte) sauvegardés en local.
 - **Sélecteur de portion global** : 100 g / 50 g / 25 g / portion entière / libre → recalcule les macros de toutes les cartes en direct.
+
+### Liste de courses (onglet 🛒 Courses)
+Coche plusieurs recettes → agrégation des ingrédients (noms FR), quantités additionnées, **rangées par rayon**. Boutons Copier (presse-papier) et Tout décocher, avec cases à cocher au fil des achats.
+
+### PWA (installable + hors-ligne)
+Manifest + service worker : « Ajouter à l'écran d'accueil » sur mobile, et fonctionne **hors-ligne** une fois ouverte (parfait sur le plan de travail).
 
 ### Modale recette (clic sur une carte)
 - **Deux onglets** : 🇫🇷 **Version France** (par défaut) et 🇺🇸 Recette originale. La version FR substitue les marques US par leurs équivalents (Spéculoos ↔ Graham cracker, etc.).

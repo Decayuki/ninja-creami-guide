@@ -10,6 +10,13 @@
 <meta property="og:title" content="Le Guide Ninja Creami">
 <meta property="og:description" content="27 recettes éditables · macros par portion · équivalents France · crée tes recettes.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://ninja-creami-app.vercel.app/images/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Creami">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -120,7 +127,11 @@ select.sort{padding:11px 14px;border:1px solid var(--line);border-radius:30px;fo
 .rcard:hover .ph img{transform:scale(1.06)}
 .rcard .tags{position:absolute;top:11px;left:11px;display:flex;gap:6px;flex-wrap:wrap;max-width:88%}
 .rcard .tag{font-size:.66rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:5px 10px;border-radius:20px;color:#fff;backdrop-filter:blur(3px)}
-.rcard .mine{position:absolute;top:11px;right:11px;background:rgba(43,38,32,.82);color:#ffcaa8;font-size:.64rem;font-weight:700;padding:5px 9px;border-radius:20px}
+.rcard .favbtn{position:absolute;top:9px;right:9px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,.82);color:#cbb9a0;font-size:1.1rem;cursor:pointer;display:grid;place-items:center;transition:.2s;backdrop-filter:blur(3px);z-index:2;line-height:1}
+.rcard .favbtn:hover{background:#fff;transform:scale(1.1)}
+.rcard .favbtn.on{color:#e8a13c}
+.cpill.sf{border-style:dashed}
+.cpill.sf.on{background:var(--ink);border-color:var(--ink);color:#ffcaa8;border-style:solid}
 .rbody{padding:18px;display:flex;flex-direction:column;flex:1}
 .rbody h3{font-size:1.2rem;font-weight:600;margin-bottom:3px;line-height:1.2}
 .rbody .meta{font-size:.76rem;color:var(--muted);margin-bottom:13px}
@@ -221,7 +232,7 @@ select.sort{padding:11px 14px;border:1px solid var(--line);border-radius:30px;fo
 .ac{position:absolute;z-index:20;left:0;right:0;top:calc(100% + 4px);background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);max-height:200px;overflow-y:auto;display:none}
 .ac.show{display:block}
 .ac div{padding:8px 12px;font-size:.84rem;cursor:pointer;border-bottom:1px solid var(--cream-2)}
-.ac div:hover{background:var(--rose-lt)}
+.ac div:hover,.ac div.hl{background:var(--rose-lt)}
 .ac div small{color:var(--muted);display:block;font-size:.72rem}
 .sugg{background:#fdf6e3;border:1px solid var(--gold);border-radius:14px;padding:14px;margin-top:16px}
 .sugg .sh{font-weight:700;color:#9a7320;font-size:.86rem;margin-bottom:6px;display:flex;align-items:center;gap:6px}
@@ -229,6 +240,22 @@ select.sort{padding:11px 14px;border:1px solid var(--line);border-radius:30px;fo
 .sugg .sset b{color:var(--rose-dk)}
 .sugg ol{margin:6px 0 10px 18px;font-size:.84rem;color:#5d5044}
 .sugg li{margin:2px 0}
+.shop-pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+.shop-pick label{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:.88rem;cursor:pointer;transition:.2s}
+.shop-pick label:hover{border-color:var(--rose-lt)}
+.shop-pick label.on{border-color:var(--rose);background:var(--rose-lt)}
+.shop-pick input{accent-color:var(--rose);width:18px;height:18px;flex-shrink:0}
+.shop-pick .nm{flex:1}.shop-pick .kc{font-size:.72rem;color:var(--muted)}
+.shopgroup{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:14px}
+.shopgroup h3{font-size:.95rem;color:var(--rose-dk);margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem}
+.shopgroup ul{list-style:none}
+.shopgroup li{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.shopgroup li:last-child{border:none}
+.shopgroup li input{accent-color:var(--rose);width:17px;height:17px}
+.shopgroup li .q{margin-left:auto;color:var(--rose-dk);font-weight:600;white-space:nowrap}
+.shopgroup li.done{opacity:.5;text-decoration:line-through}
+.shop-summary{background:var(--cream-2);border-radius:14px;padding:14px 18px;margin-bottom:16px;font-size:.9rem}
+.shop-summary b{color:var(--rose-dk)}
 footer{max-width:1180px;margin:0 auto;padding:30px 22px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);text-align:center}
 
 @media(max-width:780px){
@@ -263,6 +290,7 @@ footer{max-width:1180px;margin:0 auto;padding:30px 22px;color:var(--muted);font-
       <button data-tab="home" class="active">Accueil</button>
       <button data-tab="base">La base</button>
       <button data-tab="recipes">Recettes</button>
+      <button data-tab="shop">🛒 Courses</button>
       <button data-tab="settings">Réglages</button>
       <button data-tab="tips">Astuces</button>
       <button data-tab="errors">Erreurs</button>
@@ -278,7 +306,7 @@ footer{max-width:1180px;margin:0 auto;padding:30px 22px;color:var(--muted);font-
 <!-- HOME -->
 <div class="panel active" id="home">
   <div class="hero">
-    <img src="images/hero.png" alt="Ninja Creami">
+    <img src="images/hero.webp" alt="Ninja Creami" fetchpriority="high">
     <div class="overlay">
       <h1>La glace maison,<br><em>maîtrisée</em>.</h1>
       <p>Des recettes éditables, des macros recalculées à la portion, et la création de tes propres recettes avec préparation suggérée.</p>
@@ -316,7 +344,7 @@ footer{max-width:1180px;margin:0 auto;padding:30px 22px;color:var(--muted);font-
     <div class="eyebrow">Le fondamental</div>
     <h2 class="title">La méthode de base</h2>
     <p class="sub">Presque toutes les glaces crémeuses suivent le même squelette.</p>
-    <div class="feat-img"><img src="images/base-ingredients.png" alt="Ingrédients"></div>
+    <div class="feat-img"><img src="images/base-ingredients.webp" alt="Ingrédients" loading="lazy"></div>
     <div class="two">
       <div class="box">
         <h3>Base « 3 ingrédients »</h3>
@@ -360,6 +388,12 @@ footer{max-width:1180px;margin:0 auto;padding:30px 22px;color:var(--muted);font-
         <input type="file" id="importFile" accept="application/json" style="display:none">
       </div>
       <div class="pills-row" id="catPills"></div>
+      <div class="pills-row" id="specialFilters" style="margin-top:8px">
+        <button class="cpill sf" data-sf="fav">★ Favoris</button>
+        <button class="cpill sf" data-sf="mine">🍦 Mes recettes</button>
+        <button class="cpill sf" data-sf="prot">💪 Protéiné</button>
+        <button class="cpill sf" data-sf="light">🪶 Léger</button>
+      </div>
       <div class="basis-bar">
         <span class="lbl">Valeurs pour</span>
         <button class="bpill on" data-b="100">100 g</button>
@@ -372,6 +406,22 @@ footer{max-width:1180px;margin:0 auto;padding:30px 22px;color:var(--muted);font-
     </div>
     <div class="count" id="count"></div>
     <div class="recipes" id="recipeGrid"></div>
+  </section>
+</div>
+
+<!-- SHOPPING LIST -->
+<div class="panel" id="shop">
+  <section>
+    <div class="eyebrow">Pratique</div>
+    <h2 class="title">Liste de courses</h2>
+    <p class="sub">Coche les recettes à préparer — je regroupe les ingrédients (noms FR), additionne les quantités et range par rayon.</p>
+    <div id="shopPick" class="shop-pick"></div>
+    <div class="tb-row" style="margin:16px 0">
+      <button class="btn" id="genShop">🧮 Générer la liste</button>
+      <button class="btn ghost sm" id="copyShop">📋 Copier</button>
+      <button class="btn ghost sm" id="clearShop">Tout décocher</button>
+    </div>
+    <div id="shopOut"></div>
   </section>
 </div>
 
@@ -492,7 +542,7 @@ footer{max-width:1180px;margin:0 auto;padding:30px 22px;color:var(--muted);font-
 </main>
 
 <!-- MODAL -->
-<div class="overlay" id="overlay"><div class="modal" id="modal"></div></div>
+<div class="overlay" id="overlay"><div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Détail de la recette"></div></div>
 
 <footer>Guide généré à partir de 4 vidéos + recherche web · 2026 · Valeurs nutritionnelles = estimations calculées depuis les ingrédients, à affiner selon vos marques. Vos recettes et modifications sont sauvegardées dans ce navigateur.</footer>
 
@@ -560,6 +610,8 @@ const ING={
  brownieChunks:{n:"Brownie protéiné",fr:"Brownie protéiné",u:"g",cat:"mixin",p:{k:350,p:20,c:40,l:12}}
 };
 const ING_LIST=Object.entries(ING).map(([k,v])=>({k,...v}));
+const imgSrc=n=>'images/'+(n||'hero.png').replace(/\.png$/,'.webp');
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const CATS={
  sportive:{l:"Sportive",c:"#a23a53"},"post-workout":{l:"Post-workout",c:"#7a5cc0"},
@@ -662,6 +714,11 @@ let RECIPES;
 try{const s=localStorage.getItem(LS_KEY);RECIPES=s?JSON.parse(s):expand();}catch(e){RECIPES=expand();}
 function save(){try{localStorage.setItem(LS_KEY,JSON.stringify(RECIPES));}catch(e){}}
 function nextId(){return RECIPES.reduce((m,r)=>Math.max(m,r.id),0)+1;}
+const FAV_KEY="creami_fav";
+let FAV;try{FAV=new Set(JSON.parse(localStorage.getItem(FAV_KEY))||[]);}catch(e){FAV=new Set();}
+function saveFav(){try{localStorage.setItem(FAV_KEY,JSON.stringify([...FAV]));}catch(e){}}
+const isFav=id=>FAV.has(id);
+const norm=s=>(s||"").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu,"");
 
 /* ============ NUTRITION ============ */
 function compute(r){
@@ -718,16 +775,24 @@ let ph=`<button class="cpill all on" data-cat="">Toutes</button>`;
 Object.keys(CATS).forEach(k=>ph+=`<button class="cpill" data-cat="${k}" style="--c:${CATS[k].c}"><span class="cdot"></span>${CATS[k].l}</button>`);
 catPills.innerHTML=ph;
 let activeCats=new Set();
+let activeSF=new Set();
 
 /* ============ GRID ============ */
 const grid=document.getElementById("recipeGrid"),countEl=document.getElementById("count");
 function getFiltered(){
-  const q=document.getElementById("search").value.trim().toLowerCase();
+  const q=norm(document.getElementById("search").value.trim());
   let list=RECIPES.filter(r=>{
     const catOk=activeCats.size===0||r.cats.some(c=>activeCats.has(c));
     if(!catOk)return false;
+    if(activeSF.size){
+      const {total,w}=compute(r);const p100p=w?total.p/w*100:0,p100k=w?total.k/w*100:0;
+      if(activeSF.has("fav")&&!isFav(r.id))return false;
+      if(activeSF.has("mine")&&!r.custom)return false;
+      if(activeSF.has("prot")&&p100p<10)return false;
+      if(activeSF.has("light")&&p100k>90)return false;
+    }
     if(!q)return true;
-    const hay=(r.n+" "+r.ing.map(i=>i.name+" "+i.fr).join(" ")+" "+r.mix.map(i=>i.name).join(" ")+" "+r.cats.map(c=>CATS[c].l).join(" ")).toLowerCase();
+    const hay=norm(r.n+" "+r.ing.map(i=>i.name+" "+i.fr).join(" ")+" "+r.mix.map(i=>i.name).join(" ")+" "+r.cats.map(c=>CATS[c].l).join(" "));
     return hay.includes(q);
   });
   const s=document.getElementById("sort").value;
@@ -742,9 +807,9 @@ function card(r){
   const tags=r.cats.slice(0,3).map(c=>`<span class="tag" style="background:${CATS[c].c}cc">${CATS[c].l}</span>`).join("");
   const m=macroAt(r);
   return `<article class="rcard" data-id="${r.id}">
-    <div class="ph"><div class="tags">${tags}</div>${r.custom?'<span class="mine">★ Ma recette</span>':''}<img src="images/${r.img}" alt="${r.n}" onerror="this.src='images/hero.png'"></div>
+    <div class="ph"><div class="tags">${r.custom?'<span class="tag" style="background:#2b2620cc">★ Ma recette</span>':''}${tags}</div><button class="favbtn ${isFav(r.id)?'on':''}" data-fav="${r.id}" aria-label="Ajouter aux favoris" title="Favori">★</button><img src="${imgSrc(r.img)}" loading="lazy" alt="${esc(r.n)}" onerror="this.onerror=null;this.src='images/hero.webp'"></div>
     <div class="rbody">
-      <h3>${r.n}</h3><div class="meta">${r.t} · pot ${m.w} g</div>
+      <h3>${esc(r.n)}</h3><div class="meta">${esc(r.t)} · pot ${m.w} g</div>
       <div class="macros">
         <div class="macro"><b>${m.kcal}</b><span>kcal</span></div>
         <div class="macro"><b>${m.prot}</b><span>prot</span></div>
@@ -767,18 +832,30 @@ const overlay=document.getElementById("overlay"),modal=document.getElementById("
 let modalLang="fr"; // 'fr' | 'us'
 let draft=null;     // edit draft
 
+let lastFocus=null;
 function openModal(id){
   const r=RECIPES.find(x=>x.id===id);if(!r)return;
+  lastFocus=document.activeElement;
   draft=null;modalLang="fr";
   renderView(r);
+  modal.setAttribute("aria-label","Recette : "+r.n);
   overlay.classList.add("open");document.body.classList.add("noscroll");
+  setTimeout(()=>{const f=modal.querySelector(".m-close");if(f)f.focus();},30);
 }
-function closeModal(){overlay.classList.remove("open");document.body.classList.remove("noscroll");draft=null;}
+function closeModal(){overlay.classList.remove("open");document.body.classList.remove("noscroll");draft=null;if(lastFocus&&lastFocus.focus){lastFocus.focus();}}
+function trapFocus(e){
+  if(e.key!=="Tab"||!overlay.classList.contains("open"))return;
+  const f=[...modal.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')].filter(el=>!el.disabled&&el.offsetParent!==null);
+  if(!f.length)return;
+  const first=f[0],last=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+}
 
 function ingLine(i,lang){
-  const name=lang==="fr"?i.fr:i.name;
-  const swap=(lang==="fr"&&i.fr!==i.name)?`<span class="swap">↔ ${i.name}</span>`:"";
-  return `<li><span>${name} ${swap}</span><span class="q">${(+i.g||0)} ${i.u}</span></li>`;
+  const name=esc(lang==="fr"?i.fr:i.name);
+  const swap=(lang==="fr"&&i.fr!==i.name)?`<span class="swap">↔ ${esc(i.name)}</span>`:"";
+  return `<li><span>${name} ${swap}</span><span class="q">${(+i.g||0)} ${esc(i.u)}</span></li>`;
 }
 function renderView(r){
   const {total,w}=compute(r);
@@ -787,17 +864,17 @@ function renderView(r){
   const lang=modalLang;
   modal.innerHTML=`
     <div class="m-hero">
-      <img src="images/${r.img}" alt="${r.n}" onerror="this.src='images/hero.png'"><div class="grad"></div>
+      <img src="${imgSrc(r.img)}" alt="${r.n}" onerror="this.onerror=null;this.src='images/hero.webp'"><div class="grad"></div>
       <div class="m-tags">${tags}</div>
-      <button class="m-close" data-act="close">✕</button>
-      <h2>${r.n}</h2>
+      <button class="m-close" data-act="close" aria-label="Fermer">✕</button>
+      <h2>${esc(r.n)}</h2>
     </div>
     <div class="mtabs">
       <button class="mtab ${lang==='fr'?'on':''}" data-lang="fr">🇫🇷 Version France</button>
       <button class="mtab ${lang==='us'?'on':''}" data-lang="us">🇺🇸 Recette originale</button>
     </div>
     <div class="m-body">
-      <div class="m-meta">⚙️ <b>${r.set||"—"}</b> · ${r.t||""} ${r.src?`· 📺 ${r.src}`:""}</div>
+      <div class="m-meta">⚙️ <b>${esc(r.set||"—")}</b> · ${esc(r.t||"")} ${r.src?`· 📺 ${esc(r.src)}`:""}</div>
       <div class="nutri">
         <div class="box2"><div class="h">Pot entier (${w} g)</div><div class="nrow">
           <div><b>${total.k}</b><span>kcal</span></div><div><b>${total.p}</b><span>prot</span></div><div><b>${total.c}</b><span>gluc</span></div><div><b>${total.l}</b><span>lip</span></div></div></div>
@@ -824,7 +901,7 @@ function renderView(r){
       <ul class="ilist">${r.ing.map(i=>ingLine(i,lang)).join("")}</ul>
       ${r.mix&&r.mix.length?`<h4>Mix-ins</h4><ul class="ilist">${r.mix.map(i=>ingLine(i,lang)).join("")}</ul>`:""}
       <h4>Préparation</h4>
-      <ol class="steps">${(r.steps||[]).map(s=>`<li>${s}</li>`).join("")}</ol>
+      <ol class="steps">${(r.steps||[]).map(s=>`<li>${esc(s)}</li>`).join("")}</ol>
     </div>
     <div class="m-foot">
       <button class="btn danger sm" data-act="delete" ${r.custom?"":""}>🗑 Supprimer</button>
@@ -866,7 +943,7 @@ function renderEdit(isNew){
   const catChecks=Object.keys(CATS).map(c=>`<button type="button" class="cpill ${d.cats.includes(c)?'on':''}" data-catpick="${c}" style="--c:${CATS[c].c}"><span class="cdot"></span>${CATS[c].l}</button>`).join("");
   modal.innerHTML=`
     <div class="m-hero" style="height:120px">
-      <img src="images/${d.img}" alt="" onerror="this.src='images/hero.png'"><div class="grad"></div>
+      <img src="${imgSrc(d.img)}" alt="" onerror="this.onerror=null;this.src='images/hero.webp'"><div class="grad"></div>
       <button class="m-close" data-act="${isNew?'close':'cancel'}">✕</button>
       <h2>${isNew?"Nouvelle recette":"Éditer"}</h2>
     </div>
@@ -922,8 +999,8 @@ function refreshSugg(){
   if(valid.length<1){el.innerHTML=`<div class="sh">💡 Préparation suggérée</div><div style="font-size:.84rem;color:var(--muted)">Ajoute des ingrédients : je déduis le réglage et les étapes adaptés.</div>`;return;}
   const s=suggestPrep(valid,draft.mix.filter(i=>i.name&&+i.g>0));
   el.innerHTML=`<div class="sh">💡 Préparation suggérée ${s.onlyFruit?"· profil sorbet":s.vegan?"· profil vegan":""}</div>
-    <div class="sset">Réglage conseillé : <b>${s.set}</b></div>
-    <ol>${s.steps.map(x=>`<li>${x}</li>`).join("")}</ol>
+    <div class="sset">Réglage conseillé : <b>${esc(s.set)}</b></div>
+    <ol>${s.steps.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>
     <button class="btn ghost sm" data-act="applySugg">Appliquer cette préparation</button>`;
 }
 
@@ -1019,6 +1096,19 @@ modal.addEventListener("input",e=>{
 });
 modal.addEventListener("change",e=>{if(e.target.id==="ed-img"){draft.img=e.target.value;}});
 document.addEventListener("click",e=>{if(!e.target.closest(".nm")){modal.querySelectorAll(".ac.show").forEach(a=>a.classList.remove("show"));}});
+modal.addEventListener("keydown",e=>{
+  trapFocus(e);
+  const inp=e.target.closest(".ing-name");if(!inp)return;
+  const ac=inp.closest(".nm").querySelector(".ac");if(!ac.classList.contains("show"))return;
+  const items=[...ac.querySelectorAll("div")];if(!items.length)return;
+  let i=items.findIndex(d=>d.classList.contains("hl"));
+  if(e.key==="ArrowDown"){e.preventDefault();i=(i+1)%items.length;}
+  else if(e.key==="ArrowUp"){e.preventDefault();i=(i-1+items.length)%items.length;}
+  else if(e.key==="Enter"){e.preventDefault();const sel=items[i>=0?i:0];if(sel){applyIngFromLib(inp.closest(".edrow"),sel.dataset.k);}return;}
+  else if(e.key==="Escape"){ac.classList.remove("show");return;}
+  else return;
+  items.forEach(d=>d.classList.remove("hl"));items[i].classList.add("hl");items[i].scrollIntoView({block:"nearest"});
+});
 
 function saveDraft(){
   collectStepsFromTextarea();
@@ -1037,7 +1127,16 @@ function saveDraft(){
 }
 
 /* ============ GRID / TOOLBAR EVENTS ============ */
-grid.addEventListener("click",e=>{const c=e.target.closest(".rcard");if(c)openModal(+c.dataset.id);});
+grid.addEventListener("click",e=>{
+  const fb=e.target.closest("[data-fav]");
+  if(fb){const id=+fb.dataset.fav;FAV.has(id)?FAV.delete(id):FAV.add(id);saveFav();fb.classList.toggle("on",FAV.has(id));if(activeSF.has("fav"))render();return;}
+  const c=e.target.closest(".rcard");if(c)openModal(+c.dataset.id);
+});
+document.getElementById("specialFilters").addEventListener("click",e=>{
+  const b=e.target.closest(".sf");if(!b)return;const f=b.dataset.sf;
+  activeSF.has(f)?activeSF.delete(f):activeSF.add(f);
+  b.classList.toggle("on",activeSF.has(f));render();
+});
 document.getElementById("search").addEventListener("input",render);
 document.getElementById("sort").addEventListener("change",render);
 document.getElementById("newRecipe").addEventListener("click",startCreate);
@@ -1083,12 +1182,59 @@ document.querySelector(".basis-bar").addEventListener("click",e=>{
 });
 customInput.addEventListener("input",()=>{customG=+customInput.value||0;if(basis==="custom")render();});
 
+/* ============ SHOPPING LIST ============ */
+const CATLBL={milk:"Laitiers & boissons",plant:"Laits végétaux",protein:"Protéines & frais",fat:"Matières grasses",binder:"Liants & poudres",sweet:"Sucrants",fruit:"Fruits",flavor:"Arômes & épices",mixin:"Mix-ins & toppings",liquid:"Divers"};
+const CATORDER=["protein","milk","plant","fat","fruit","sweet","binder","flavor","mixin","liquid"];
+function buildShopPicker(){
+  const el=document.getElementById("shopPick");
+  el.innerHTML=RECIPES.map(r=>{
+    const {total}=compute(r);
+    return `<label data-pick="${r.id}"><input type="checkbox"><span class="nm">${esc(r.n)}</span><span class="kc">${total.k} kcal</span></label>`;
+  }).join("");
+}
+function genShop(){
+  const ids=[...document.querySelectorAll('#shopPick input:checked')].map(c=>+c.closest('[data-pick]').dataset.pick);
+  const out=document.getElementById("shopOut");
+  if(!ids.length){out.innerHTML=`<div class="empty"><div class="big">🛒</div>Coche au moins une recette.</div>`;return;}
+  const agg={}; // key -> {name,fr,u,cat,g}
+  ids.map(id=>RECIPES.find(r=>r.id===id)).filter(Boolean).forEach(r=>{
+    [...r.ing,...(r.mix||[])].forEach(i=>{
+      const key=(i.fr||i.name).toLowerCase()+"|"+i.u;
+      if(!agg[key])agg[key]={name:i.fr||i.name,u:i.u,cat:i.cat||"liquid",g:0};
+      agg[key].g+=(+i.g||0);
+    });
+  });
+  const groups={};
+  Object.values(agg).forEach(it=>{(groups[it.cat]=groups[it.cat]||[]).push(it);});
+  let html=`<div class="shop-summary">🧾 <b>${ids.length}</b> recette(s) · <b>${Object.keys(agg).length}</b> ingrédients à acheter. Coche au fur et à mesure.</div>`;
+  CATORDER.filter(c=>groups[c]).forEach(c=>{
+    const items=groups[c].sort((a,b)=>a.name.localeCompare(b.name,"fr"));
+    html+=`<div class="shopgroup"><h3>${CATLBL[c]||c}</h3><ul>${items.map(it=>
+      `<li><input type="checkbox" aria-label="Acheté"><span>${esc(it.name)}</span><span class="q">${Math.round(it.g)} ${esc(it.u)}</span></li>`).join("")}</ul></div>`;
+  });
+  out.innerHTML=html;
+  out.querySelectorAll(".shopgroup li input").forEach(cb=>cb.addEventListener("change",e=>e.target.closest("li").classList.toggle("done",e.target.checked)));
+  out._text=()=>{
+    let t="LISTE DE COURSES — Ninja Creami\n\n";
+    CATORDER.filter(c=>groups[c]).forEach(c=>{t+=`== ${CATLBL[c]||c} ==\n`;groups[c].forEach(it=>t+=`- ${it.name} : ${Math.round(it.g)} ${it.u}\n`);t+="\n";});
+    return t;
+  };
+}
+document.getElementById("genShop").addEventListener("click",genShop);
+document.getElementById("clearShop").addEventListener("click",()=>{document.querySelectorAll('#shopPick input:checked').forEach(c=>{c.checked=false;c.closest('label').classList.remove('on');});document.getElementById("shopOut").innerHTML="";});
+document.getElementById("copyShop").addEventListener("click",()=>{
+  const out=document.getElementById("shopOut");if(!out._text){alert("Génère d'abord la liste.");return;}
+  navigator.clipboard.writeText(out._text()).then(()=>{const b=document.getElementById("copyShop");const o=b.textContent;b.textContent="✓ Copié";setTimeout(()=>b.textContent=o,1500);}).catch(()=>alert("Copie impossible."));
+});
+document.getElementById("shopPick").addEventListener("change",e=>{const l=e.target.closest("label");if(l)l.classList.toggle("on",e.target.checked);});
+
 /* ============ TABS ============ */
 function go(tab){
   document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
   document.querySelectorAll("#tabs button").forEach(b=>b.classList.remove("active"));
   document.getElementById(tab).classList.add("active");
   document.querySelector(`#tabs button[data-tab="${tab}"]`).classList.add("active");
+  if(tab==="shop")buildShopPicker();
   window.scrollTo({top:0,behavior:"smooth"});
 }
 document.getElementById("tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(b)go(b.dataset.tab);});
@@ -1096,6 +1242,11 @@ document.querySelectorAll("[data-go]").forEach(c=>c.addEventListener("click",()=
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&overlay.classList.contains("open"))closeModal();});
 
 render();
+
+/* ============ PWA ============ */
+if("serviceWorker" in navigator){
+  window.addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(()=>{});});
+}
 </script>
 </body>
 </html>

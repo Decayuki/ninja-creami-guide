@@ -1,5 +1,15 @@
 # Changelog — Le Guide Ninja Creami
 
+## v4 — Perf, courses & PWA (2026-06-21)
+Suite à la revue de l'app, 6 lots livrés (dev → quality → doc) :
+- **Performance** : images PNG → **WebP** (9 Mo → ~0,8 Mo, -91 %), `loading="lazy"`, `fetchpriority` sur le hero.
+- **Recherche & filtres** : recherche **insensible aux accents**, filtres rapides (★ Favoris, 🍦 Mes recettes, 💪 Protéiné, 🪶 Léger), **favoris** persistés.
+- **Liste de courses** : onglet 🛒 Courses — sélection multi-recettes → agrégation des ingrédients (FR) par rayon, copier/décocher.
+- **PWA** : manifest + service worker (installable, hors-ligne), icônes 192/512 + apple-touch-icon.
+- **Partage** : `og:image` + `twitter:card`.
+- **Accessibilité** : `role="dialog"`/`aria-modal`, focus-trap + restauration du focus, autocomplete navigable au clavier (↑/↓/Entrée/Échap), `aria-label` sur les icônes.
+- **Sécurité** : échappement HTML des contenus dynamiques (protège l'import JSON).
+
 ## v3.1 — Outils & déploiement (2026-06-21)
 - **Objectif nutritionnel inverse** : « je veux X g de protéines / kcal / glucides / lipides → quelle portion ? » directement dans la modale.
 - **Export / Import JSON** des recettes (sauvegarde et partage).
