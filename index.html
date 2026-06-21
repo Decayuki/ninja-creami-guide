@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Guide Ninja Creami</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%A8%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Le Guide Ninja Creami — 27 recettes éditables, macros recalculées, équivalents FR, création de recettes.">
+<meta name="theme-color" content="#c0506a">
+<meta property="og:title" content="Le Guide Ninja Creami">
+<meta property="og:description" content="27 recettes éditables · macros par portion · équivalents France · crée tes recettes.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#c0506a;--rose-dk:#a23a53;--rose-lt:#f7e7eb;
+  --cream:#fbf6f0;--cream-2:#f4ebe1;--ink:#2b2620;--muted:#8a7c6c;
+  --line:#eaddcf;--gold:#c8a86a;--shadow:0 18px 50px -20px rgba(120,70,80,.35);--radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+body.noscroll{overflow:hidden}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+
+header.top{position:sticky;top:0;z-index:50;background:rgba(251,246,240,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces';font-weight:600;font-size:1.15rem;white-space:nowrap}
+.logo .dot{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f4c2cf,var(--rose));box-shadow:0 4px 12px -3px var(--rose)}
+nav.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.tabs button{font-size:.86rem;font-weight:500;color:var(--muted);background:transparent;border:none;padding:8px 14px;border-radius:30px;cursor:pointer;transition:.25s;white-space:nowrap}
+nav.tabs button:hover{color:var(--rose);background:var(--rose-lt)}
+nav.tabs button.active{color:#fff;background:var(--rose);box-shadow:0 6px 16px -6px var(--rose)}
+
+main{max-width:1180px;margin:0 auto;padding:0 22px 90px}
+.panel{display:none;animation:fade .5s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+section{padding-top:40px}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:10px}
+h2.title{font-size:2rem;font-weight:600;line-height:1.15;margin-bottom:6px;letter-spacing:-.5px}
+.sub{color:var(--muted);max-width:680px;margin-bottom:22px}
+
+.hero{position:relative;border-radius:28px;overflow:hidden;margin-top:26px;box-shadow:var(--shadow)}
+.hero img{width:100%;height:clamp(320px,52vh,560px);object-fit:cover}
+.hero .overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(26px,6vw,72px);background:linear-gradient(90deg,rgba(251,246,240,.92) 0%,rgba(251,246,240,.6) 42%,rgba(251,246,240,0) 70%)}
+.hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:600;line-height:1.02;letter-spacing:-1px;max-width:600px}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero p{margin-top:16px;max-width:440px;color:#5d5044;font-size:1.02rem}
+.hero .pills{margin-top:22px;display:flex;gap:8px;flex-wrap:wrap}
+.pill{background:#fff;border:1px solid var(--line);color:var(--rose-dk);font-size:.78rem;font-weight:600;padding:7px 14px;border-radius:30px;box-shadow:0 6px 14px -10px rgba(0,0,0,.3)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;text-align:center}
+.stat .n{font-family:'Fraunces';font-size:2rem;font-weight:600;color:var(--rose)}
+.stat .l{font-size:.8rem;color:var(--muted);margin-top:2px}
+.cards-home{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:34px}
+.home-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;cursor:pointer;transition:.3s}
+.home-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--rose-lt)}
+.home-card .ic{font-size:1.6rem}
+.home-card h3{font-size:1.1rem;margin:10px 0 4px;font-weight:600}
+.home-card p{font-size:.86rem;color:var(--muted)}
+.src-list{margin-top:30px;background:var(--cream-2);border-radius:var(--radius);padding:22px 26px}
+.src-list h3{font-size:1rem;margin-bottom:10px}
+.src-list li{font-size:.88rem;color:#5d5044;margin:6px 0;list-style:none;padding-left:18px;position:relative}
+.src-list li::before{content:'▸';position:absolute;left:0;color:var(--rose)}
+
+.feat-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin:8px 0 26px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.box h3{font-size:1.2rem;margin-bottom:12px;color:var(--rose-dk)}
+ol.steps{counter-reset:s;list-style:none}
+ol.steps li{position:relative;padding:6px 0 6px 40px;font-size:.92rem;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border:none}
+ol.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:6px;width:26px;height:26px;background:var(--rose-lt);color:var(--rose-dk);border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.8rem}
+ul.ck{list-style:none}
+ul.ck li{padding:6px 0 6px 26px;position:relative;font-size:.92rem}
+ul.ck li::before{content:'✓';position:absolute;left:0;color:var(--rose);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:.86rem;margin-top:6px}
+th{background:var(--rose);color:#fff;text-align:left;padding:9px 10px;font-weight:600}
+th:first-child{border-radius:10px 0 0 0}th:last-child{border-radius:0 10px 0 0}
+td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top}
+
+.toolbar{position:sticky;top:62px;z-index:30;background:rgba(251,246,240,.92);backdrop-filter:blur(10px);padding:14px 0 8px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.tb-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.search{flex:1;min-width:200px;position:relative}
+.search input{width:100%;padding:11px 14px 11px 38px;border:1px solid var(--line);border-radius:30px;font-size:.9rem;background:#fff;outline:none;transition:.2s}
+.search input:focus{border-color:var(--rose);box-shadow:0 0 0 3px var(--rose-lt)}
+.search .si{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted)}
+select.sort{padding:11px 14px;border:1px solid var(--line);border-radius:30px;font-size:.86rem;background:#fff;cursor:pointer;color:var(--ink)}
+.btn{padding:11px 16px;border-radius:30px;font-size:.86rem;font-weight:600;cursor:pointer;border:1px solid var(--rose);background:var(--rose);color:#fff;transition:.2s;white-space:nowrap}
+.btn:hover{background:var(--rose-dk);border-color:var(--rose-dk)}
+.btn.ghost{background:#fff;color:var(--rose-dk)}
+.btn.ghost:hover{background:var(--rose-lt)}
+.btn.sm{padding:7px 12px;font-size:.8rem}
+.btn.danger{border-color:#d9534f;background:#fff;color:#d9534f}
+.btn.danger:hover{background:#fdecea}
+.pills-row{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.cpill{font-size:.8rem;font-weight:600;padding:7px 14px;border-radius:30px;border:1.5px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;transition:.2s;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.cpill .cdot{width:9px;height:9px;border-radius:50%;background:var(--c,#ccc)}
+.cpill:hover{border-color:var(--c,var(--rose));color:var(--ink)}
+.cpill.on{background:var(--c,var(--rose));border-color:var(--c,var(--rose));color:#fff}
+.cpill.on .cdot{background:#fff}
+.cpill.all.on{background:var(--rose);border-color:var(--rose)}
+.basis-bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;background:var(--ink);color:#fff;border-radius:16px;padding:10px 14px;margin-top:4px}
+.basis-bar .lbl{font-size:.8rem;font-weight:600;color:#ffcaa8;letter-spacing:.04em;margin-right:4px}
+.bpill{font-size:.82rem;font-weight:600;padding:6px 13px;border-radius:30px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;cursor:pointer;transition:.2s}
+.bpill:hover{background:rgba(255,255,255,.12)}
+.bpill.on{background:#fff;color:var(--ink)}
+.basis-bar input{width:74px;padding:6px 10px;border-radius:30px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:.82rem;outline:none}
+.count{font-size:.82rem;color:var(--muted);margin:14px 0 6px}
+.recipes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:24px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.35s;cursor:pointer}
+.rcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.rcard .ph{position:relative;height:190px;overflow:hidden}
+.rcard .ph img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.rcard:hover .ph img{transform:scale(1.06)}
+.rcard .tags{position:absolute;top:11px;left:11px;display:flex;gap:6px;flex-wrap:wrap;max-width:88%}
+.rcard .tag{font-size:.66rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:5px 10px;border-radius:20px;color:#fff;backdrop-filter:blur(3px)}
+.rcard .mine{position:absolute;top:11px;right:11px;background:rgba(43,38,32,.82);color:#ffcaa8;font-size:.64rem;font-weight:700;padding:5px 9px;border-radius:20px}
+.rbody{padding:18px;display:flex;flex-direction:column;flex:1}
+.rbody h3{font-size:1.2rem;font-weight:600;margin-bottom:3px;line-height:1.2}
+.rbody .meta{font-size:.76rem;color:var(--muted);margin-bottom:13px}
+.macros{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:7px}
+.macro{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:8px 4px;text-align:center}
+.macro b{display:block;font-family:'Fraunces';font-size:1.12rem;color:var(--rose-dk);line-height:1.05}
+.macro span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.basis-note{font-size:.72rem;color:var(--muted);margin-bottom:6px;text-align:center}
+.basis-note b{color:var(--rose-dk)}
+.openhint{margin-top:auto;text-align:center;font-size:.82rem;font-weight:600;color:var(--rose-dk);background:var(--rose-lt);padding:10px;border-radius:12px}
+.empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty .big{font-size:2.4rem;margin-bottom:8px}
+
+.callout{border-radius:14px;padding:14px 18px;margin:14px 0;font-size:.9rem;display:flex;gap:12px}
+.callout .ic{font-size:1.2rem;flex-shrink:0}
+.tip{background:#fdf6e3;border-left:4px solid var(--gold)}
+.warn{background:#fdecea;border-left:4px solid #d9534f}
+.callout b{display:block;margin-bottom:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.settings{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:8px}
+.scard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.scard h3{font-size:1.05rem;color:var(--rose-dk);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.scard p{font-size:.88rem;color:#5d5044}
+.buy-hd{background:linear-gradient(120deg,var(--rose),var(--rose-dk));color:#fff;border-radius:var(--radius);padding:26px 28px;margin-bottom:22px}
+.buy-hd h3{color:#fff;font-size:1.3rem;margin-bottom:6px}
+.buy-hd p{opacity:.92;font-size:.92rem;max-width:620px}
+.buy-cat,.frcat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-bottom:16px}
+.buy-cat h3,.frcat h3{font-size:1.1rem;color:var(--rose-dk);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.buy-cat .ic,.frcat .ic{width:34px;height:34px;background:var(--rose-lt);border-radius:10px;display:grid;place-items:center;font-size:1.1rem}
+.buy-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.bi{display:flex;gap:10px;font-size:.88rem;align-items:flex-start;padding:8px 12px;background:var(--cream);border-radius:10px}
+.bi .chk{color:var(--rose);font-weight:700}
+.bi small{color:var(--muted);display:block}
+.frcat td{vertical-align:top}.frcat td:first-child{white-space:nowrap}
+.frcat small.m{color:var(--muted);font-weight:400;font-style:italic}
+
+/* ---------- MODAL ---------- */
+.overlay{position:fixed;inset:0;z-index:100;background:rgba(43,30,34,.55);backdrop-filter:blur(5px);display:none;align-items:flex-start;justify-content:center;padding:30px 16px;overflow-y:auto}
+.overlay.open{display:flex}
+.modal{background:var(--cream);width:min(780px,100%);border-radius:24px;box-shadow:0 30px 80px -20px rgba(0,0,0,.5);overflow:hidden;animation:pop .3s ease}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:none}}
+.m-hero{position:relative;height:170px}
+.m-hero img{width:100%;height:100%;object-fit:cover}
+.m-hero .grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(43,38,32,.7),transparent 60%)}
+.m-hero h2{position:absolute;bottom:14px;left:22px;right:60px;color:#fff;font-size:1.6rem;font-weight:600;line-height:1.1;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.m-close{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.9);border:none;font-size:1.1rem;cursor:pointer;display:grid;place-items:center;transition:.2s}
+.m-close:hover{background:#fff;transform:rotate(90deg)}
+.m-tags{position:absolute;top:12px;left:14px;display:flex;gap:6px;flex-wrap:wrap;max-width:70%}
+.m-tags .tag{font-size:.64rem;font-weight:700;text-transform:uppercase;padding:4px 9px;border-radius:20px;color:#fff;backdrop-filter:blur(3px)}
+.mtabs{display:flex;gap:6px;padding:14px 22px 0}
+.mtab{flex:1;padding:11px;border:none;background:var(--cream-2);color:var(--muted);font-weight:600;font-size:.9rem;border-radius:12px 12px 0 0;cursor:pointer;transition:.2s}
+.mtab.on{background:#fff;color:var(--rose-dk);box-shadow:0 -2px 0 var(--rose) inset}
+.m-body{background:#fff;padding:20px 22px 24px;max-height:none}
+.m-meta{font-size:.8rem;color:var(--muted);margin-bottom:14px}
+.m-meta b{color:var(--ink)}
+.nutri{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.nutri .box2{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:12px}
+.nutri .box2 .h{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--rose);font-weight:700;margin-bottom:8px}
+.nutri .nrow{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.nutri .nrow div{text-align:center}
+.nutri .nrow b{display:block;font-family:'Fraunces';font-size:1.05rem;color:var(--rose-dk);line-height:1}
+.nutri .nrow span{font-size:.6rem;color:var(--muted);text-transform:uppercase}
+.m-body h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--rose);margin:18px 0 8px}
+.ilist{list-style:none}
+.ilist li{display:flex;justify-content:space-between;gap:10px;font-size:.9rem;padding:7px 0;border-bottom:1px dashed var(--line)}
+.ilist li .q{color:var(--rose-dk);font-weight:600;white-space:nowrap}
+.ilist li .swap{font-size:.74rem;color:var(--muted);font-style:italic}
+.m-foot{display:flex;gap:10px;justify-content:flex-end;padding:16px 22px;background:var(--cream-2);flex-wrap:wrap}
+.goal{background:var(--cream-2);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:18px}
+.goal .h{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--rose);font-weight:700;margin-bottom:8px}
+.goal .desc{font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.goal-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.goal-row select,.goal-row input{padding:9px 11px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:.86rem;background:#fff;outline:none}
+.goal-row input{width:100px}
+.goal-row select:focus,.goal-row input:focus{border-color:var(--rose);box-shadow:0 0 0 3px var(--rose-lt)}
+.goal-out{margin-top:12px;font-size:.9rem;color:var(--ink)}
+.goal-out b{color:var(--rose-dk)}
+.goal-out .gmacros{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.goal-out .gmacros span{background:#fff;border:1px solid var(--line);border-radius:20px;padding:4px 11px;font-size:.78rem;color:var(--rose-dk);font-weight:600}
+
+/* edit mode */
+.ed label{display:block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--rose);margin:14px 0 5px}
+.ed input[type=text],.ed input[type=number],.ed textarea,.ed .field{width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:.9rem;background:#fff;outline:none}
+.ed input:focus,.ed textarea:focus{border-color:var(--rose);box-shadow:0 0 0 3px var(--rose-lt)}
+.ed textarea{resize:vertical;min-height:90px;line-height:1.5}
+.catbox{display:flex;flex-wrap:wrap;gap:6px}
+.catbox .cpill{cursor:pointer}
+.edrow{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:8px;position:relative}
+.edrow .r1{display:flex;gap:8px;align-items:center}
+.edrow .nm{flex:1 1 auto;min-width:0;position:relative}
+.edrow .qty{flex:0 0 70px;width:70px}.edrow .un{flex:0 0 54px;width:54px}
+.edrow .rm{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:#fff;color:#d9534f;cursor:pointer;flex-shrink:0;font-size:.9rem}
+.edrow .rm:hover{background:#fdecea}
+.edrow .r2{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
+.edrow .r2 .mc{position:relative}
+.edrow .r2 input{padding:6px 8px;font-size:.8rem;text-align:center}
+.edrow .r2 .mcl{font-size:.6rem;color:var(--muted);text-transform:uppercase;text-align:center;margin-top:2px;display:block}
+.ac{position:absolute;z-index:20;left:0;right:0;top:calc(100% + 4px);background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);max-height:200px;overflow-y:auto;display:none}
+.ac.show{display:block}
+.ac div{padding:8px 12px;font-size:.84rem;cursor:pointer;border-bottom:1px solid var(--cream-2)}
+.ac div:hover{background:var(--rose-lt)}
+.ac div small{color:var(--muted);display:block;font-size:.72rem}
+.sugg{background:#fdf6e3;border:1px solid var(--gold);border-radius:14px;padding:14px;margin-top:16px}
+.sugg .sh{font-weight:700;color:#9a7320;font-size:.86rem;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.sugg .sset{font-size:.86rem;margin-bottom:6px}
+.sugg .sset b{color:var(--rose-dk)}
+.sugg ol{margin:6px 0 10px 18px;font-size:.84rem;color:#5d5044}
+.sugg li{margin:2px 0}
+footer{max-width:1180px;margin:0 auto;padding:30px 22px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);text-align:center}
+
+@media(max-width:780px){
+  .two,.grid2,.nutri{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  nav.tabs{order:3;width:100%;margin-left:0;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .bar{flex-wrap:wrap;gap:10px}.toolbar{top:0}
+  .frcat{overflow-x:auto}.frcat table{min-width:540px}.frcat td:first-child{white-space:normal}
+  .m-hero h2{font-size:1.3rem}
+  .hero .overlay{background:linear-gradient(to top,rgba(251,246,240,.96),rgba(251,246,240,.55) 55%,rgba(251,246,240,.12))}
+  .hero h1{max-width:none}.hero p{max-width:none}
+}
+@media(max-width:480px){
+  main{padding:0 14px 80px}
+  h2.title{font-size:1.55rem}
+  .stat{padding:14px}.stat .n{font-size:1.6rem}
+  .overlay{padding:14px 8px}
+  .m-body{padding:16px 14px 20px}.mtabs{padding:12px 14px 0}
+  .m-foot{padding:14px}.m-foot .btn{flex:1 1 auto;text-align:center}
+  .macro b{font-size:1rem}
+  .goal-row input{width:80px}.goal-row select{flex:1}
+  .logo{font-size:1rem}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="bar">
+    <div class="logo"><span class="dot"></span> Le Guide Ninja Creami</div>
+    <nav class="tabs" id="tabs">
+      <button data-tab="home" class="active">Accueil</button>
+      <button data-tab="base">La base</button>
+      <button data-tab="recipes">Recettes</button>
+      <button data-tab="settings">Réglages</button>
+      <button data-tab="tips">Astuces</button>
+      <button data-tab="errors">Erreurs</button>
+      <button data-tab="clean">Nettoyage</button>
+      <button data-tab="buy">Achats</button>
+      <button data-tab="fr">🇫🇷 Équivalents</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<div class="panel active" id="home">
+  <div class="hero">
+    <img src="images/hero.png" alt="Ninja Creami">
+    <div class="overlay">
+      <h1>La glace maison,<br><em>maîtrisée</em>.</h1>
+      <p>Des recettes éditables, des macros recalculées à la portion, et la création de tes propres recettes avec préparation suggérée.</p>
+      <div class="pills"><span class="pill">Recettes éditables</span><span class="pill">Macros live</span><span class="pill">Crée tes recettes</span></div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="n" id="stCount">27</div><div class="l">recettes</div></div>
+    <div class="stat"><div class="n">10</div><div class="l">catégories</div></div>
+    <div class="stat"><div class="n">FR</div><div class="l">équivalents intégrés</div></div>
+    <div class="stat"><div class="n">∞</div><div class="l">recettes perso possibles</div></div>
+  </div>
+  <section>
+    <div class="eyebrow">Par où commencer</div>
+    <h2 class="title">Navigue dans le guide</h2>
+    <div class="cards-home">
+      <div class="home-card" data-go="recipes"><div class="ic">🍨</div><h3>Recettes</h3><p>Filtre, trie, ouvre une recette (FR/Originale), édite-la ou crée la tienne.</p></div>
+      <div class="home-card" data-go="base"><div class="ic">🥛</div><h3>La base</h3><p>Le gabarit universel + version optimisée crémeuse.</p></div>
+      <div class="home-card" data-go="settings"><div class="ic">⚙️</div><h3>Réglages</h3><p>Ice Cream, Sorbet, Re-Spin, Mix-In : ce qu'ils font vraiment.</p></div>
+      <div class="home-card" data-go="fr"><div class="ic">🇫🇷</div><h3>Équivalents</h3><p>Toutes les marques US et par quoi les remplacer en France.</p></div>
+    </div>
+  </section>
+  <div class="src-list">
+    <h3>Sources</h3>
+    <ul>
+      <li>4 vidéos YouTube (Exercise4CheatMeals, Tried Tested and True, Joey Suggs)</li>
+      <li>Recettes web : Lifestyle of a Foodie, Flexible Dieting Lifestyle, Lauren Fit Foodie, Mary's Whole Life, Fit Foodie Finds, Winding Creek Ranch, Food Banjo, Recipes From A Pantry…</li>
+    </ul>
+  </div>
+</div>
+
+<!-- BASE -->
+<div class="panel" id="base">
+  <section>
+    <div class="eyebrow">Le fondamental</div>
+    <h2 class="title">La méthode de base</h2>
+    <p class="sub">Presque toutes les glaces crémeuses suivent le même squelette.</p>
+    <div class="feat-img"><img src="images/base-ingredients.png" alt="Ingrédients"></div>
+    <div class="two">
+      <div class="box">
+        <h3>Base « 3 ingrédients »</h3>
+        <ul class="ck"><li><b>~350 ml de lait protéiné filtré</b></li><li><b>10 g de Jello sans sucre / sans gras</b></li><li><b>~45 g de protéine en poudre</b></li></ul>
+        <h4 style="margin:16px 0 8px;color:var(--rose);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em">Étapes</h4>
+        <ol class="steps"><li>Verser le lait, ajouter Jello + protéine.</li><li>Mélanger au mousseur / mixeur plongeant.</li><li>Couvrir, congeler 12–24 h à plat.</li><li>Tempérer ou passer sous l'eau chaude.</li><li>Lancer, puis Re-spin + 2 c.à.s lait.</li><li>Mix-ins, relancer sur Mix-In.</li></ol>
+      </div>
+      <div class="box">
+        <h3>Base optimisée</h3>
+        <table><tr><th>Ingrédient</th><th>Quantité</th><th>Rôle</th></tr>
+        <tr><td>Vrai sucre</td><td>~10 g</td><td>Lisse l'arrière-goût</td></tr>
+        <tr><td>Gomme xanthane</td><td>~0,5 g</td><td>Texture grasse sans gras</td></tr>
+        <tr><td>Sel</td><td>1 pincée</td><td>Rehausse les saveurs</td></tr>
+        <tr><td>Jaune d'œuf</td><td>1</td><td>Émulsifiant, gelato</td></tr></table>
+        <div class="callout tip" style="margin-top:16px"><span class="ic">💡</span><span><b>Geste clé</b>Mixer puis continuer 90 s de plus. Reposer 15 min avant congélation.</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- RECIPES -->
+<div class="panel" id="recipes">
+  <section>
+    <div class="eyebrow">Le cœur du guide</div>
+    <h2 class="title">Recettes</h2>
+    <p class="sub">Clique une recette pour l'ouvrir (version FR par défaut), l'éditer, ou crée la tienne — les macros se recalculent automatiquement.</p>
+    <div class="toolbar">
+      <div class="tb-row">
+        <div class="search"><span class="si">🔍</span><input id="search" type="text" placeholder="Rechercher un parfum, un ingrédient…"></div>
+        <select class="sort" id="sort">
+          <option value="default">Tri : pertinence</option>
+          <option value="prot">Protéines (100 g) ↓</option>
+          <option value="calLow">Calories (100 g) ↑</option>
+          <option value="calHigh">Calories (100 g) ↓</option>
+          <option value="az">Nom A → Z</option>
+        </select>
+        <button class="btn" id="newRecipe">+ Créer une recette</button>
+        <button class="btn ghost sm" id="exportR" title="Exporter mes recettes (JSON)">⬇ Export</button>
+        <button class="btn ghost sm" id="importR" title="Importer des recettes (JSON)">⬆ Import</button>
+        <button class="btn ghost sm" id="resetRecipes" title="Restaurer les recettes d'origine">↺ Réinit.</button>
+        <input type="file" id="importFile" accept="application/json" style="display:none">
+      </div>
+      <div class="pills-row" id="catPills"></div>
+      <div class="basis-bar">
+        <span class="lbl">Valeurs pour</span>
+        <button class="bpill on" data-b="100">100 g</button>
+        <button class="bpill" data-b="50">50 g</button>
+        <button class="bpill" data-b="25">25 g</button>
+        <button class="bpill" data-b="full">Portion entière</button>
+        <button class="bpill" data-b="custom">Libre</button>
+        <input id="customG" type="number" min="1" max="2000" placeholder="g" style="display:none">
+      </div>
+    </div>
+    <div class="count" id="count"></div>
+    <div class="recipes" id="recipeGrid"></div>
+  </section>
+</div>
+
+<!-- SETTINGS -->
+<div class="panel" id="settings">
+  <section>
+    <div class="eyebrow">La machine</div>
+    <h2 class="title">Réglages : ce qu'ils font vraiment</h2>
+    <p class="sub">Les programmes ne changent QUE la vitesse (RPM) et la durée de rotation. Le bon réglage dépend de la recette.</p>
+    <div class="settings">
+      <div class="scard"><h3>🍦 Ice Cream = Gelato</h3><p>Descente 60 s à 1200 RPM, remontée 35 s à 450 RPM.</p></div>
+      <div class="scard"><h3>🔄 Re-Spin</h3><p>Dès que la texture est friable. Ajoute un peu de lait avant.</p></div>
+      <div class="scard"><h3>🥄 Mix-In</h3><p>Incorpore les morceaux ; lisse aussi une pinte presque crémeuse.</p></div>
+      <div class="scard"><h3>🧊 Sorbet</h3><p>Pour les fruits — souvent 2 passages.</p></div>
+      <div class="scard"><h3>🥛 Lite Ice Cream</h3><p>Idéal bases protéinées / basses calories.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- TIPS -->
+<div class="panel" id="tips">
+  <section>
+    <div class="eyebrow">Niveau pro</div>
+    <h2 class="title">Astuces de pro</h2>
+    <div class="grid2">
+      <div class="box"><h3>Texture & ingrédients</h3><ul class="ck">
+        <li><b>Lait protéiné &gt; lait normal</b></li><li><b>Édulcorant seul = arrière-goût</b> → +10 g sucre</li>
+        <li><b>Xanthane ~0,5 g, pesée</b></li><li><b>Sel dans chaque recette</b></li>
+        <li><b>Le gras = le goût</b></li><li><b>Jaune d'œuf</b> = gelato</li>
+        <li>Lait d'amande = « eau de noix » : couper avec du vrai lait</li><li>Mix-ins fragiles : les congeler d'abord</li></ul></div>
+      <div class="box"><h3>Congélation</h3><ul class="ck">
+        <li>Congeler <b>≥ 24 h</b></li><li>Toujours <b>surface plane</b></li><li>Re-spin des restes ≠ crémeux du 1er spin</li></ul>
+        <div class="callout tip" style="margin-top:14px"><span class="ic">🧊</span><span><b>Bosse gelée</b>Araser le dôme avant de lancer.</span></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ERRORS -->
+<div class="panel" id="errors">
+  <section>
+    <div class="eyebrow">À éviter</div>
+    <h2 class="title">Les erreurs à ne pas commettre</h2>
+    <div class="callout warn"><span class="ic">🪨</span><span><b>1. Pot dur comme la roche</b>Tempérer 10–15 min sinon machine abîmée.</span></div>
+    <div class="callout warn"><span class="ic">🛍️</span><span><b>2. Sac plastique dans le pot</b>À proscrire, la lame peut se détacher.</span></div>
+    <div class="callout warn"><span class="ic">🧀</span><span><b>3. Ingrédients épais mal mélangés</b>Cream cheese 30 s micro-ondes, dissoudre le sucre, puis liquides.</span></div>
+    <div class="callout warn"><span class="ic">📉</span><span><b>4. Recettes « mono-ingrédient »</b>Ajouter cacao + édulcorant + xanthane.</span></div>
+    <div class="callout warn"><span class="ic">🥡</span><span><b>5. Trop peu de pots</b>En prévoir 5+.</span></div>
+  </section>
+</div>
+
+<!-- CLEAN -->
+<div class="panel" id="clean">
+  <section>
+    <div class="eyebrow">Entretien</div>
+    <h2 class="title">Nettoyage & entretien</h2>
+    <p class="sub">Le couvercle est le coupable n°1 des mauvaises odeurs.</p>
+    <div class="two">
+      <div class="box"><h3>Après chaque usage</h3><ol class="steps"><li>Essuyer la pale dès la fin du spin.</li><li>Rincer, insister sur les rainures de la lame.</li><li>Retirer le joint, laver au savon.</li><li>Eau chaude dans le couvercle + secouer.</li><li>Sécher.</li></ol></div>
+      <div class="box"><h3>Entretien profond</h3><p class="sub">Toutes les 2–3 semaines.</p><div class="callout tip" style="margin-top:8px"><span class="ic">🧴</span><span><b>Bain de vinaigre</b>Couvercle dans le vinaigre blanc quelques heures, puis cure-dent.</span></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- BUY -->
+<div class="panel" id="buy">
+  <section>
+    <div class="eyebrow">La liste de courses</div>
+    <h2 class="title">Ce qu'il faut acheter</h2>
+    <div class="buy-hd"><h3>💰 Budget réaliste</h3><p>Une machine « pensée à 200 $ » revient plutôt à <b>300–400 $</b>. La glace maison est jusqu'à 80 % moins chère : amortie en 6 mois à 1 an.</p></div>
+    <div class="buy-cat"><h3><span class="ic">🍦</span> La machine</h3><div class="buy-items">
+      <div class="bi"><span class="chk">✓</span><span><b>Ninja Creami OG</b><small>Deluxe OK, « Swirl » déconseillé.</small></span></div>
+      <div class="bi"><span class="chk">✓</span><span><b>Promos Costco</b><small>~99 $ + pots bonus.</small></span></div></div></div>
+    <div class="buy-cat"><h3><span class="ic">🔧</span> Matériel</h3><div class="buy-items">
+      <div class="bi"><span class="chk">✓</span><span><b>Pots officiels ×5</b></span></div>
+      <div class="bi"><span class="chk">✓</span><span><b>Mixeur plongeant / mousseur</b></span></div>
+      <div class="bi"><span class="chk">✓</span><span><b>Balance de cuisine</b></span></div>
+      <div class="bi"><span class="chk">✓</span><span><b>Émulsifiant portatif</b></span></div></div></div>
+    <div class="buy-cat"><h3><span class="ic">🥫</span> Ingrédients</h3><div class="buy-items">
+      <div class="bi"><span class="chk">✓</span><span>Lait Fairlife / Core Power</span></div>
+      <div class="bi"><span class="chk">✓</span><span>Protéine en poudre</span></div>
+      <div class="bi"><span class="chk">✓</span><span>Jello sans sucre/gras</span></div>
+      <div class="bi"><span class="chk">✓</span><span>Érythritol / allulose</span></div>
+      <div class="bi"><span class="chk">✓</span><span>Gomme xanthane, PB2, cacao</span></div></div></div>
+  </section>
+</div>
+
+<!-- FR EQUIVALENTS -->
+<div class="panel" id="fr">
+  <section>
+    <div class="eyebrow">Courses en France</div>
+    <h2 class="title">Équivalents produits 🇫🇷</h2>
+    <p class="sub">Référence complète. Les équivalents FR sont aussi intégrés dans chaque recette (onglet « Version France » de la modale).</p>
+    <div class="frcat"><h3><span class="ic">🥛</span> Laitiers & protéines</h3><table>
+      <tr><th>Produit US</th><th>Équivalent France</th><th>Où / astuce</th></tr>
+      <tr><td><b>Fairlife Fat-Free</b></td><td>Lait écrémé microfiltré (+ whey) ou skyr à boire</td><td>Grandes surfaces</td></tr>
+      <tr><td><b>Core Power</b></td><td>Barebells Milkshake, Yfood, Weider</td><td>Monoprix, Amazon, Prozis</td></tr>
+      <tr><td><b>Whey / protein powder</b></td><td>Whey isolate / protéine en poudre</td><td>MyProtein, Prozis, Decathlon</td></tr>
+      <tr><td><b>Cottage cheese</b></td><td>Cottage cheese, sinon fromage blanc / faisselle</td><td>Rayon frais</td></tr>
+      <tr><td><b>Greek yogurt</b></td><td>Yaourt grec (Fage) ou skyr</td><td>Rayon frais</td></tr>
+      <tr><td><b>Heavy cream</b></td><td>Crème liquide entière 30 %</td><td>Partout</td></tr></table></div>
+    <div class="frcat"><h3><span class="ic">🍬</span> Édulcorants, liants & poudres</h3><table>
+      <tr><th>Produit US</th><th>Équivalent France</th><th>Où / astuce</th></tr>
+      <tr><td><b>Jell-O pudding sans sucre</b></td><td>Préparation flan (Alsa/Dr. Oetker) ou xanthane + arôme + édulcorant</td><td>Aides pâtisserie</td></tr>
+      <tr><td><b>PB2</b></td><td>Beurre de cacahuète en poudre</td><td>MyProtein, Prozis, bio</td></tr>
+      <tr><td><b>Allulose</b></td><td>Érythritol, xylitol, fruit du moine</td><td>Bio / Amazon</td></tr>
+      <tr><td><b>Xanthan gum</b></td><td>Gomme de xanthane</td><td>Bio / sans gluten</td></tr>
+      <tr><td><b>Maple syrup</b></td><td>Sirop d'érable</td><td>Partout</td></tr></table></div>
+    <div class="frcat"><h3><span class="ic">🍪</span> Biscuits & confiseries</h3><table>
+      <tr><th>Produit US</th><th>Équivalent France</th><th>Où / astuce</th></tr>
+      <tr><td><b>Graham crackers</b></td><td>Spéculoos (Lotus) ou Digestive</td><td>Le spéculoos est le plus fidèle</td></tr>
+      <tr><td><b>Chips Ahoy</b></td><td>Cookies pépites (Pepito, Granola LU)</td><td>Partout</td></tr>
+      <tr><td><b>Reese's</b></td><td>M&M's Peanut, mini Snickers, ou chocolat + cacahuète</td><td>Amazon / épicerie US</td></tr>
+      <tr><td><b>Jet-Puffed fluff</b></td><td>Marshmallow Fluff ou chamallows fondus</td><td>Grandes surfaces</td></tr></table></div>
+    <div class="callout tip"><span class="ic">💡</span><span><b>Règle d'or</b>Garde le même rôle fonctionnel : liant, protéine, édulcorant, gras, sel. Les marques changent, la structure reste.</span></div>
+  </section>
+</div>
+
+</main>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay"><div class="modal" id="modal"></div></div>
+
+<footer>Guide généré à partir de 4 vidéos + recherche web · 2026 · Valeurs nutritionnelles = estimations calculées depuis les ingrédients, à affiner selon vos marques. Vos recettes et modifications sont sauvegardées dans ce navigateur.</footer>
+
+<script>
+/* ============ INGREDIENT LIBRARY (per 100 g/ml) ============ */
+const ING={
+ fairlifeSkim:{n:"Lait écrémé Fairlife",fr:"Lait écrémé microfiltré (+ whey)",u:"ml",cat:"milk",p:{k:33,p:5.4,c:2.5,l:0}},
+ fairlife2:{n:"Lait Fairlife 2%",fr:"Lait demi-écrémé",u:"ml",cat:"milk",p:{k:50,p:5.4,c:2.5,l:1.9}},
+ fairlife1:{n:"Lait Fairlife 1%",fr:"Lait demi-écrémé",u:"ml",cat:"milk",p:{k:46,p:5.4,c:2.5,l:1}},
+ wholeMilk:{n:"Lait entier",fr:"Lait entier",u:"ml",cat:"milk",p:{k:64,p:3.2,c:4.8,l:3.6}},
+ almondMilk:{n:"Lait d'amande non sucré",fr:"Lait d'amande non sucré",u:"ml",cat:"plant",p:{k:13,p:0.5,c:0.3,l:1.1}},
+ cashewMilk:{n:"Lait de cajou non sucré",fr:"Lait de cajou non sucré",u:"ml",cat:"plant",p:{k:13,p:0.5,c:0.4,l:1}},
+ coconutMilk:{n:"Lait de coco entier",fr:"Lait de coco entier (conserve)",u:"ml",cat:"fat",p:{k:197,p:2,c:3,l:21}},
+ cream:{n:"Crème liquide entière 30%",fr:"Crème liquide entière 30%",u:"ml",cat:"fat",p:{k:290,p:2.4,c:3,l:30}},
+ halfhalf:{n:"Half-and-half",fr:"Moitié lait + moitié crème",u:"ml",cat:"fat",p:{k:130,p:3,c:4,l:11}},
+ corePower:{n:"Core Power Fairlife shake",fr:"Shake protéiné (Barebells/Yfood)",u:"ml",cat:"protein",p:{k:56,p:9,c:3,l:1.8}},
+ cottage:{n:"Cottage cheese 2%",fr:"Cottage cheese / fromage blanc",u:"g",cat:"protein",p:{k:84,p:11,c:4.3,l:2.3}},
+ greekYog:{n:"Yaourt grec 2%",fr:"Yaourt grec / skyr",u:"g",cat:"protein",p:{k:73,p:9.5,c:4,l:2}},
+ wheyVanilla:{n:"Protéine vanille",fr:"Whey vanille",u:"g",cat:"protein",p:{k:380,p:80,c:8,l:5}},
+ wheyChoc:{n:"Protéine chocolat",fr:"Whey chocolat",u:"g",cat:"protein",p:{k:380,p:78,c:9,l:6}},
+ wheyChocPB:{n:"Protéine chocolat-cacahuète",fr:"Whey choco-cacahuète",u:"g",cat:"protein",p:{k:390,p:78,c:9,l:7}},
+ wheyVanPB:{n:"Protéine vanille-cacahuète",fr:"Whey vanille-cacahuète",u:"g",cat:"protein",p:{k:390,p:78,c:9,l:7}},
+ veganChoc:{n:"Protéine chocolat végétale",fr:"Protéine végétale chocolat",u:"g",cat:"protein",p:{k:370,p:75,c:10,l:6}},
+ cookieProt:{n:"Protéine saveur cookie",fr:"Whey cookie",u:"g",cat:"protein",p:{k:380,p:78,c:10,l:6}},
+ jelloVanilla:{n:"Jello vanille sans sucre",fr:"Préparation flan / xanthane+arôme",u:"g",cat:"binder",p:{k:330,p:0,c:80,l:0}},
+ jelloChoc:{n:"Jello chocolat sans sucre",fr:"Préparation flan choco / xanthane",u:"g",cat:"binder",p:{k:330,p:2,c:78,l:1}},
+ jelloCheesecake:{n:"Jello cheesecake sans sucre",fr:"Préparation flan / xanthane+arôme",u:"g",cat:"binder",p:{k:330,p:0,c:80,l:0}},
+ xanthan:{n:"Gomme xanthane",fr:"Gomme de xanthane",u:"g",cat:"binder",p:{k:0,p:0,c:0,l:0}},
+ pb2:{n:"PB2 (cacahuète en poudre)",fr:"Beurre de cacahuète en poudre",u:"g",cat:"fat",p:{k:410,p:45,c:35,l:12}},
+ pbCreamy:{n:"Beurre de cacahuète crémeux",fr:"Beurre de cacahuète",u:"g",cat:"fat",p:{k:590,p:25,c:20,l:50}},
+ cocoa:{n:"Cacao non sucré",fr:"Cacao non sucré (Van Houten)",u:"g",cat:"flavor",p:{k:228,p:20,c:58,l:14}},
+ brownieMix:{n:"Poudre brownie batter",fr:"Préparation brownie en poudre",u:"g",cat:"flavor",p:{k:380,p:10,c:75,l:5}},
+ sugar:{n:"Sucre",fr:"Sucre",u:"g",cat:"sweet",p:{k:400,p:0,c:100,l:0}},
+ powderedSugar:{n:"Sucre glace",fr:"Sucre glace",u:"g",cat:"sweet",p:{k:400,p:0,c:100,l:0}},
+ allulose:{n:"Allulose",fr:"Érythritol",u:"g",cat:"sweet",p:{k:20,p:0,c:5,l:0}},
+ maple:{n:"Sirop d'érable",fr:"Sirop d'érable",u:"g",cat:"sweet",p:{k:260,p:0,c:67,l:0}},
+ caramelSF:{n:"Sirop caramel sans sucre",fr:"Sirop caramel 0% (Teisseire)",u:"g",cat:"sweet",p:{k:0,p:0,c:0,l:0}},
+ smoresSF:{n:"Sirop s'mores sans sucre",fr:"Sirop sans sucre",u:"g",cat:"sweet",p:{k:0,p:0,c:0,l:0}},
+ strawberryFresh:{n:"Fraises fraîches",fr:"Fraises fraîches",u:"g",cat:"fruit",p:{k:32,p:0.7,c:7.7,l:0.3}},
+ strawberryFrozen:{n:"Fraises surgelées",fr:"Fraises surgelées",u:"g",cat:"fruit",p:{k:35,p:0.7,c:8,l:0.2}},
+ watermelon:{n:"Pastèque",fr:"Pastèque",u:"g",cat:"fruit",p:{k:30,p:0.6,c:7.6,l:0.2}},
+ pineappleCan:{n:"Ananas en conserve",fr:"Ananas en conserve",u:"g",cat:"fruit",p:{k:60,p:0.5,c:15,l:0.1}},
+ mangoCan:{n:"Mangue en conserve",fr:"Mangue en conserve",u:"g",cat:"fruit",p:{k:60,p:0.5,c:15,l:0.2}},
+ applesauce:{n:"Compote de pommes sans sucre",fr:"Compote de pommes sans sucre",u:"g",cat:"fruit",p:{k:42,p:0.2,c:11,l:0.1}},
+ banana:{n:"Banane",fr:"Banane",u:"g",cat:"fruit",p:{k:89,p:1.1,c:23,l:0.3}},
+ dates:{n:"Dattes Medjool",fr:"Dattes Medjool",u:"g",cat:"fruit",p:{k:277,p:1.8,c:75,l:0.2}},
+ oats:{n:"Flocons d'avoine",fr:"Flocons d'avoine",u:"g",cat:"flavor",p:{k:380,p:13,c:67,l:7}},
+ flax:{n:"Graines de lin moulues",fr:"Graines de lin moulues",u:"g",cat:"fat",p:{k:534,p:18,c:29,l:42}},
+ creamCheese:{n:"Cream cheese",fr:"Fromage frais (St Môret/Philadelphia)",u:"g",cat:"fat",p:{k:340,p:6,c:4,l:34}},
+ vanilla:{n:"Extrait de vanille",fr:"Extrait de vanille",u:"g",cat:"flavor",p:{k:288,p:0,c:13,l:0}},
+ coffee:{n:"Café instantané",fr:"Café instantané",u:"g",cat:"flavor",p:{k:350,p:12,c:41,l:1}},
+ salt:{n:"Sel",fr:"Sel",u:"g",cat:"flavor",p:{k:0,p:0,c:0,l:0}},
+ water:{n:"Eau",fr:"Eau",u:"ml",cat:"liquid",p:{k:0,p:0,c:0,l:0}},
+ limeJuice:{n:"Jus de citron vert",fr:"Jus de citron vert",u:"ml",cat:"flavor",p:{k:25,p:0,c:8,l:0}},
+ lemonJuice:{n:"Jus de citron",fr:"Jus de citron",u:"ml",cat:"flavor",p:{k:22,p:0,c:7,l:0}},
+ cinnamon:{n:"Cannelle",fr:"Cannelle",u:"g",cat:"flavor",p:{k:247,p:4,c:81,l:1.2}},
+ grahamCracker:{n:"Graham cracker",fr:"Spéculoos / Digestive",u:"g",cat:"mixin",p:{k:430,p:6,c:77,l:10}},
+ reeses:{n:"Reese's",fr:"Bouchée chocolat-cacahuète",u:"g",cat:"mixin",p:{k:520,p:11,c:50,l:30}},
+ reesesThins:{n:"Reese's Thins",fr:"Chocolat-cacahuète fin",u:"g",cat:"mixin",p:{k:530,p:11,c:48,l:33}},
+ chipsAhoy:{n:"Chips Ahoy",fr:"Cookies pépites (Pepito)",u:"g",cat:"mixin",p:{k:490,p:5,c:67,l:23}},
+ oreo:{n:"Oreo",fr:"Oreo",u:"g",cat:"mixin",p:{k:480,p:5,c:71,l:20}},
+ jetPuffed:{n:"Jet-Puffed (guimauve)",fr:"Marshmallow Fluff",u:"g",cat:"mixin",p:{k:320,p:1,c:80,l:0}},
+ sprinkles:{n:"Vermicelles de sucre",fr:"Vermicelles (Vahiné)",u:"g",cat:"mixin",p:{k:400,p:0,c:90,l:3}},
+ cookieDoughBites:{n:"Pâte à cookie crue saine",fr:"Pâte à cookie crue",u:"g",cat:"mixin",p:{k:380,p:8,c:55,l:14}},
+ brownieChunks:{n:"Brownie protéiné",fr:"Brownie protéiné",u:"g",cat:"mixin",p:{k:350,p:20,c:40,l:12}}
+};
+const ING_LIST=Object.entries(ING).map(([k,v])=>({k,...v}));
+
+const CATS={
+ sportive:{l:"Sportive",c:"#a23a53"},"post-workout":{l:"Post-workout",c:"#7a5cc0"},
+ healthy:{l:"Healthy",c:"#5e8c5a"},"low-cal":{l:"Basses cal",c:"#3c9aa0"},
+ kids:{l:"Kids",c:"#e08a3c"},sorbet:{l:"Sorbet",c:"#d4607a"},
+ vegan:{l:"Vegan",c:"#6aa84f"},gourmand:{l:"Gourmand",c:"#b5763c"},
+ cafe:{l:"Café",c:"#8a6d4f"},"petit-dej":{l:"Petit-déj",c:"#c0883c"}
+};
+
+/* ============ SEED RECIPES (k = clé ING, g = grammes) ============ */
+const SEED=[
+ {n:"Fraise-Cheesecake",cats:["sportive"],img:"recipe1-strawberry.png",t:"1 pint · 12–24h",set:"Light Ice Cream + Re-spin + Mix-In",src:"Joey Suggs",
+  ing:[{k:"fairlifeSkim",g:350},{k:"jelloCheesecake",g:10},{k:"wheyVanilla",g:45}],mix:[{k:"strawberryFresh",g:24},{k:"grahamCracker",g:14}],
+  steps:["Mélanger lait + Jello + protéine.","Couvrir, congeler 12–24 h.","Light Ice Cream, 1 passage.","+2 c.à.s lait, Re-spin.","Ajouter fraises + graham, Mix-In."]},
+ {n:"Double Chocolate Reese's",cats:["sportive","gourmand"],img:"recipe2-chocolate.png",t:"1 pint · 12–24h",set:"Light Ice Cream + Re-spin + Mix-In",src:"Joey Suggs",
+  ing:[{k:"fairlifeSkim",g:350},{k:"jelloChoc",g:10},{k:"wheyChocPB",g:45}],mix:[{k:"reesesThins",g:36}],
+  steps:["Mélanger lait + Jello + protéine.","Congeler 12–24 h.","Light Ice Cream, spin 1.","+2 c.à.s lait, Re-spin.","Ajouter Reese's Thins, Mix-In."]},
+ {n:"Cookie Dough Cacahuète",cats:["sportive","gourmand"],img:"recipe3-cookiedough.png",t:"1 pint · 12–24h",set:"Light Ice Cream + Re-spin + Mix-In",src:"Joey Suggs",
+  ing:[{k:"fairlifeSkim",g:350},{k:"jelloVanilla",g:10},{k:"wheyVanPB",g:45}],mix:[{k:"chipsAhoy",g:33}],
+  steps:["Mélanger lait + Jello + protéine.","Congeler 12–24 h.","Light Ice Cream, spin 1 puis Re-spin (+2 c.à.s lait).","Ajouter Chips Ahoy, Mix-In."]},
+ {n:"Double Chocolate S'mores",cats:["low-cal","gourmand"],img:"recipe4-smores.png",t:"1 pint · 24h",set:"Light Ice Cream + Re-spin + Mix-In",src:"Joey Suggs",
+  ing:[{k:"corePower",g:330},{k:"jelloChoc",g:10}],mix:[{k:"smoresSF",g:15},{k:"grahamCracker",g:14},{k:"jetPuffed",g:20}],
+  steps:["Verser shake + Jello, mélanger.","Congeler 24 h.","Light Ice Cream, 1 passage.","Ajouter sirop s'mores, Re-spin.","Graham + Jet-Puffed, Mix-In."]},
+ {n:"Sorbet Ananas-Mangue",cats:["sorbet","low-cal","vegan","healthy"],img:"recipe5-mango.png",t:"1 pint · 24h",set:"Sorbet ×2",src:"Joey Suggs",
+  ing:[{k:"pineappleCan",g:200},{k:"mangoCan",g:200}],mix:[],
+  steps:["Égoutter ~80 % du liquide.","Mettre ananas + mangue.","Compléter au jus jusqu'à la ligne max.","Congeler 24 h.","Sorbet, 2 passages."]},
+ {n:"Sorbet Pastèque-Fraise",cats:["sorbet","low-cal","vegan","healthy"],img:"recipe6-watermelon.png",t:"1 pint · 24h",set:"Sorbet ×2",src:"Joey Suggs",
+  ing:[{k:"watermelon",g:360},{k:"strawberryFresh",g:40}],mix:[],
+  steps:["Remplir de pastèque.","Émulsionner.","Idem fraises (en mettre moins).","Congeler 24 h.","Sorbet, 2 passages."]},
+ {n:"Vanille Fairlife express",cats:["sportive","post-workout"],img:"vanilla.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin",src:"Lifestyle of a Foodie",
+  ing:[{k:"corePower",g:330},{k:"jelloVanilla",g:10}],mix:[],
+  steps:["Verser le shake + pudding, fouetter.","Congeler à plat 24 h.","Lite Ice Cream.","Re-spin avec un filet de shake si friable."]},
+ {n:"Chocolat-Cacahuète protéiné",cats:["sportive","post-workout","gourmand"],img:"peanutbutter.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin",src:"Lifestyle of a Foodie",
+  ing:[{k:"corePower",g:330},{k:"pb2",g:24},{k:"jelloChoc",g:12}],mix:[],
+  steps:["Fouetter PB2 + pudding dans le shake.","Congeler 24 h.","Lite Ice Cream.","Re-spin avec un filet de shake si friable."]},
+ {n:"Brownie Cosmique protéiné",cats:["sportive","post-workout","gourmand"],img:"brownie.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin",src:"The Flexible Dieting Lifestyle",
+  ing:[{k:"fairlifeSkim",g:240},{k:"wheyChoc",g:45},{k:"brownieMix",g:30},{k:"cocoa",g:7}],mix:[],
+  steps:["Mixer tous les ingrédients lisses.","Congeler 24 h.","Lite Ice Cream.","Re-spin avec 1 c.à.s lait si besoin."]},
+ {n:"Gâteau d'anniversaire protéiné",cats:["sportive","kids","gourmand"],img:"birthdaycake.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin + Mix-In",src:"The Flexible Dieting Lifestyle",
+  ing:[{k:"fairlifeSkim",g:300},{k:"wheyVanilla",g:45},{k:"jelloVanilla",g:12},{k:"vanilla",g:3}],mix:[{k:"sprinkles",g:12}],
+  steps:["Mixer lait, whey, pudding, vanille.","Congeler 24 h.","Lite Ice Cream, Re-spin si besoin.","Ajouter sprinkles, Mix-In."]},
+ {n:"Peanut Butter Cup",cats:["sportive","gourmand"],img:"peanutbutter.png",t:"1 pint · 24h",set:"Lite Ice Cream + Mix-In",src:"Kroll's Korner",
+  ing:[{k:"wholeMilk",g:360},{k:"pb2",g:25},{k:"wheyVanilla",g:30},{k:"jelloVanilla",g:12}],mix:[{k:"pbCreamy",g:16},{k:"reeses",g:14}],
+  steps:["Fouetter lait, PB2, whey, pudding.","Congeler 24 h.","Lite Ice Cream.","Ajouter beurre de cacahuète + Reese's, Mix-In."]},
+ {n:"Chocolat Cottage Cheese",cats:["sportive","post-workout","low-cal","healthy"],img:"recipe2-chocolate.png",t:"1 pint · 18–24h",set:"Ice Cream + Re-spin + Mix-In",src:"Mary's Whole Life",
+  ing:[{k:"wheyChoc",g:30},{k:"cottage",g:113},{k:"fairlife2",g:240}],mix:[{k:"oreo",g:40}],
+  steps:["Mixer whey, cottage cheese, lait jusqu'à lisse.","Congeler 18–24 h.","Ice Cream, +1 c.à.s lait, Re-spin.","Émietter biscuits, Mix-In."]},
+ {n:"Banane-Avoine Récup'",cats:["post-workout","petit-dej","healthy"],img:"banana.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin",src:"Lara Clevenger",
+  ing:[{k:"banana",g:180},{k:"fairlife1",g:240},{k:"wheyVanilla",g:50},{k:"oats",g:30},{k:"flax",g:10},{k:"vanilla",g:3}],mix:[],
+  steps:["Écraser la banane, ajouter le reste, mixer.","Congeler 24 h.","Lite Ice Cream.","Re-spin avec un filet de lait si friable."]},
+ {n:"Sorbet pastèque minute",cats:["sorbet","low-cal","vegan","healthy"],img:"recipe6-watermelon.png",t:"1 pint · 24h",set:"Sorbet + Re-spin",src:"The Tasty Travelers",
+  ing:[{k:"watermelon",g:453},{k:"allulose",g:24},{k:"limeJuice",g:5},{k:"salt",g:0.5}],mix:[],
+  steps:["Mixer le tout jusqu'à liquide.","Verser sans dépasser la ligne max.","Congeler 24 h à plat.","Sorbet, Re-spin +1 c.à.s eau si poudreux."]},
+ {n:"Sorbet pomme-caramel",cats:["sorbet","low-cal","vegan","healthy"],img:"applecaramel.png",t:"1 pint · 24h",set:"Sorbet + Re-spin",src:"The Tasty Travelers",
+  ing:[{k:"applesauce",g:488},{k:"allulose",g:50},{k:"caramelSF",g:22},{k:"cinnamon",g:1}],mix:[],
+  steps:["Mixer le tout.","Verser dans le pot.","Congeler 24 h à plat.","Sorbet, Re-spin si poudreux."]},
+ {n:"Sorbet fraise surgelée",cats:["sorbet","low-cal","vegan","healthy"],img:"recipe1-strawberry.png",t:"1 pint · 24h",set:"Sorbet + Re-spin",src:"I Dream of Ice Cream",
+  ing:[{k:"strawberryFrozen",g:210},{k:"water",g:120},{k:"sugar",g:50}],mix:[],
+  steps:["Dissoudre le sucre dans l'eau.","Mettre les fraises sans dépasser la ligne.","Verser l'eau sucrée pour combler.","Congeler 24 h.","Sorbet, Re-spin +1–2 c.à.s eau si poudreux."]},
+ {n:"Whip fraise façon Dole",cats:["low-cal","healthy","gourmand"],img:"recipe1-strawberry.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin",src:"The Tasty Travelers",
+  ing:[{k:"strawberryFresh",g:200},{k:"fairlife2",g:120},{k:"halfhalf",g:60},{k:"allulose",g:36},{k:"lemonJuice",g:5}],mix:[],
+  steps:["Mixer le tout jusqu'à lisse.","Verser dans le pot.","Congeler 24 h, araser la bosse.","Lite Ice Cream ; +1–2 c.à.s lait + Re-spin pour soft-serve."]},
+ {n:"Glace protéinée vanille",cats:["healthy","sportive","post-workout","low-cal"],img:"vanilla.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin",src:"Lauren Fit Foodie",
+  ing:[{k:"fairlife2",g:240},{k:"almondMilk",g:240},{k:"wheyVanilla",g:15},{k:"jelloVanilla",g:7}],mix:[],
+  steps:["Mixer tous les ingrédients.","Verser dans le pot.","Congeler 24 h à plat.","Lite Ice Cream ; Re-spin avec un filet de lait si poudreux."]},
+ {n:"Glace protéinée chocolat",cats:["healthy","sportive","post-workout","low-cal","gourmand"],img:"recipe2-chocolate.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin",src:"Mary's Whole Life",
+  ing:[{k:"almondMilk",g:360},{k:"wheyChoc",g:30},{k:"jelloChoc",g:15},{k:"cocoa",g:15}],mix:[],
+  steps:["Mixer le tout jusqu'à lisse.","Verser dans le pot.","Congeler 24 h.","Lite Ice Cream ; Re-spin avec un filet de lait (gèle dur)."]},
+ {n:"Glace Vanille des Enfants",cats:["kids","gourmand"],img:"vanilla.png",t:"1 pint · 24h",set:"Ice Cream + Re-spin",src:"Cooked & Loved",
+  ing:[{k:"wholeMilk",g:300},{k:"cream",g:120},{k:"powderedSugar",g:50},{k:"vanilla",g:5},{k:"salt",g:1}],mix:[],
+  steps:["Fouetter sucre, vanille, sel avec un peu de lait.","Ajouter lait + crème, mélanger.","Verser dans le pot.","Congeler 24 h à plat.","Ice Cream ; Re-spin +1 c.à.s lait si granuleux."]},
+ {n:"Fraise Crémeuse",cats:["kids","gourmand"],img:"recipe1-strawberry.png",t:"1 pint · 24h",set:"Ice Cream + Re-spin",src:"Winding Creek Ranch",
+  ing:[{k:"wholeMilk",g:300},{k:"cream",g:120},{k:"powderedSugar",g:65},{k:"vanilla",g:5},{k:"strawberryFresh",g:75}],mix:[],
+  steps:["Mixer lait, crème, sucre, vanille 10–15 s.","Ajouter fraises, mélanger bref.","Verser dans le pot.","Congeler 24 h.","Ice Cream, Re-spin si besoin."]},
+ {n:"Cookies & Cream",cats:["kids","gourmand"],img:"cookiescream.png",t:"1 pint · 24h",set:"Ice Cream + Mix-In",src:"Food Banjo",
+  ing:[{k:"creamCheese",g:30},{k:"sugar",g:50},{k:"vanilla",g:5},{k:"cream",g:120},{k:"wholeMilk",g:240}],mix:[{k:"oreo",g:50}],
+  steps:["Cream cheese 10 s au micro-ondes, fouetter avec sucre + vanille.","Ajouter crème + lait, fouetter.","Verser dans le pot.","Congeler 24 h.","Ice Cream, puis Oreo au centre, Mix-In."]},
+ {n:"Brownie Protéiné Choco-Cacahuète",cats:["gourmand","post-workout","sportive"],img:"brownie.png",t:"1 pint · 24h",set:"Ice Cream + Mix-In",src:"Fit Foodie Finds",
+  ing:[{k:"corePower",g:414},{k:"maple",g:15}],mix:[{k:"brownieChunks",g:50},{k:"pbCreamy",g:16}],
+  steps:["Verser shake + sirop, mélanger.","Congeler 24 h.","Ice Cream (ou Lite).","Brownie au centre, Mix-In.","Filet de beurre de cacahuète au service."]},
+ {n:"Pâte à Cookie Protéinée",cats:["gourmand","post-workout","healthy"],img:"recipe3-cookiedough.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin + Mix-In",src:"Patii's Page",
+  ing:[{k:"almondMilk",g:240},{k:"greekYog",g:180},{k:"cookieProt",g:32},{k:"vanilla",g:5},{k:"maple",g:30},{k:"pbCreamy",g:16},{k:"salt",g:1}],mix:[{k:"cookieDoughBites",g:45}],
+  steps:["Mixer tout sauf les morceaux.","Verser dans le pot, congeler 24 h.","Lite Ice Cream, Re-spin si granuleux.","Pâte à cookie au centre, Mix-In sans re-spin."]},
+ {n:"Coco Vegan Onctueuse",cats:["vegan","gourmand"],img:"coconut.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin",src:"Recipes From A Pantry",
+  ing:[{k:"coconutMilk",g:400},{k:"maple",g:45},{k:"vanilla",g:5}],mix:[],
+  steps:["Mixer lait de coco, édulcorant, vanille.","Verser dans le pot.","Congeler 24 h à plat.","Lite Ice Cream.","Re-spin +1–2 c.à.s lait de coco si friable."]},
+ {n:"Chocolat Vegan aux Dattes",cats:["vegan","gourmand","post-workout"],img:"recipe2-chocolate.png",t:"1 pint · 24h",set:"Lite Ice Cream + Re-spin",src:"Feasting on Fruit",
+  ing:[{k:"cashewMilk",g:240},{k:"coconutMilk",g:120},{k:"veganChoc",g:30},{k:"dates",g:50},{k:"cocoa",g:12},{k:"vanilla",g:5},{k:"salt",g:1}],mix:[],
+  steps:["Mixer à haute vitesse jusqu'à dissolution des dattes.","Verser dans le pot, congeler 24 h.","Lite Ice Cream.","Re-spin avec un filet de lait de cajou si sec."]},
+ {n:"Café Espresso",cats:["cafe","gourmand"],img:"coffee.png",t:"1 pint · 24h",set:"Ice Cream + Re-spin",src:"Winding Creek Ranch",
+  ing:[{k:"cream",g:120},{k:"wholeMilk",g:300},{k:"powderedSugar",g:65},{k:"coffee",g:4},{k:"vanilla",g:5}],mix:[],
+  steps:["Fouetter le tout jusqu'à dissolution.","Verser dans le pot.","Congeler 24 h à plat.","Ice Cream, Re-spin si besoin.","Affogato : un shot d'espresso au service."]}
+];
+
+/* ============ STATE & PERSISTENCE ============ */
+const LS_KEY="creami_v2";
+function mkIng(x){const b=ING[x.k];return {name:b.n,fr:b.fr,u:b.u,cat:b.cat,g:x.g,p:{...b.p}};}
+function expand(){return SEED.map((r,i)=>({id:i+1,custom:false,...r,ing:r.ing.map(mkIng),mix:r.mix.map(mkIng)}));}
+let RECIPES;
+try{const s=localStorage.getItem(LS_KEY);RECIPES=s?JSON.parse(s):expand();}catch(e){RECIPES=expand();}
+function save(){try{localStorage.setItem(LS_KEY,JSON.stringify(RECIPES));}catch(e){}}
+function nextId(){return RECIPES.reduce((m,r)=>Math.max(m,r.id),0)+1;}
+
+/* ============ NUTRITION ============ */
+function compute(r){
+  let k=0,p=0,c=0,l=0,w=0;
+  [...r.ing,...(r.mix||[])].forEach(i=>{const f=(+i.g||0)/100;k+=i.p.k*f;p+=i.p.p*f;c+=i.p.c*f;l+=i.p.l*f;w+=(+i.g||0);});
+  return {total:{k:Math.round(k),p:+p.toFixed(1),c:+c.toFixed(1),l:+l.toFixed(1)},w:Math.round(w)};
+}
+let basis="100",customG=100;
+function curG(w){if(basis==="full")return w;if(basis==="custom")return customG>0?customG:0;return +basis;}
+function macroAt(r){const{total,w}=compute(r);const g=curG(w),f=w?g/w:0;
+  return {kcal:Math.round(total.k*f),prot:+(total.p*f).toFixed(1),gluc:+(total.c*f).toFixed(1),lip:+(total.l*f).toFixed(1),w};}
+function basisLabel(w){if(basis==="full")return `portion entière (${w} g)`;if(basis==="custom")return `${customG} g`;return `${basis} g`;}
+function reverseGoal(r,macro,target){
+  const {total,w}=compute(r);const key={prot:'p',kcal:'k',gluc:'c',lip:'l'}[macro];
+  const tv=total[key];if(!tv||tv<=0)return null;
+  const grams=target/(tv/w),f=grams/w;
+  return {grams:Math.round(grams),portions:+(grams/w).toFixed(2),k:Math.round(total.k*f),p:+(total.p*f).toFixed(1),c:+(total.c*f).toFixed(1),l:+(total.l*f).toFixed(1)};
+}
+
+/* ============ PREP SUGGESTION ENGINE ============ */
+function suggestPrep(ing,mix){
+  const cats=new Set(ing.map(i=>i.cat));
+  const has=c=>cats.has(c);
+  const onlyFruit = ing.length>0 && ing.every(i=>["fruit","sweet","liquid","flavor"].includes(i.cat)) && has("fruit");
+  const hasProtein = has("protein");
+  const hasRichFat = ing.some(i=>i.cat==="fat" && /crème|coco|entier/i.test(i.name)) || ing.some(i=>i.name==="Lait entier");
+  const hasThick = ing.some(i=>/cottage|yaourt|cream cheese|fromage/i.test(i.name));
+  const isVegan = ing.length>0 && !ing.some(i=>i.cat==="protein" && /whey|cottage|yaourt|lait/i.test(i.name)) && !ing.some(i=>["milk"].includes(i.cat)) && !ing.some(i=>/crème|cream cheese/i.test(i.name));
+  let set, steps=[];
+  if(onlyFruit){
+    set="Sorbet ×2";
+    steps=["Mixer les fruits + édulcorant jusqu'à liquide homogène.","Verser dans le pot sans dépasser la ligne max.","Congeler 24 h à plat.","Lancer Sorbet, puis Re-spin (+1 c.à.s eau) si poudreux."];
+  } else if(hasProtein){
+    set="Lite Ice Cream + Re-spin";
+    steps=[hasThick?"Mixer au mixeur plongeant jusqu'à parfaitement lisse (base épaisse).":"Mélanger / mixer la base jusqu'à dissolution complète.","Verser dans le pot, couvrir.","Congeler 24 h à plat.","Lancer Lite Ice Cream, puis Re-spin avec un filet de lait si friable."];
+  } else if(hasRichFat){
+    set="Ice Cream + Re-spin";
+    steps=["Fouetter / mixer la base jusqu'à homogène.","Verser dans le pot, couvrir.","Congeler 24 h à plat.","Lancer Ice Cream, Re-spin si granuleux."];
+  } else {
+    set="Lite Ice Cream + Re-spin";
+    steps=["Mélanger la base jusqu'à lisse.","Congeler 24 h à plat.","Lite Ice Cream, Re-spin si besoin."];
+  }
+  if(mix&&mix.length){
+    set+=" + Mix-In";
+    const names=mix.map(m=>m.name).join(", ");
+    steps.push(`Creuser un trou au centre, ajouter ${names||"les mix-ins"}, lancer Mix-In.`);
+  }
+  return {set,steps,vegan:isVegan,onlyFruit};
+}
+
+/* ============ CATEGORY PILLS ============ */
+const catPills=document.getElementById("catPills");
+let ph=`<button class="cpill all on" data-cat="">Toutes</button>`;
+Object.keys(CATS).forEach(k=>ph+=`<button class="cpill" data-cat="${k}" style="--c:${CATS[k].c}"><span class="cdot"></span>${CATS[k].l}</button>`);
+catPills.innerHTML=ph;
+let activeCats=new Set();
+
+/* ============ GRID ============ */
+const grid=document.getElementById("recipeGrid"),countEl=document.getElementById("count");
+function getFiltered(){
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  let list=RECIPES.filter(r=>{
+    const catOk=activeCats.size===0||r.cats.some(c=>activeCats.has(c));
+    if(!catOk)return false;
+    if(!q)return true;
+    const hay=(r.n+" "+r.ing.map(i=>i.name+" "+i.fr).join(" ")+" "+r.mix.map(i=>i.name).join(" ")+" "+r.cats.map(c=>CATS[c].l).join(" ")).toLowerCase();
+    return hay.includes(q);
+  });
+  const s=document.getElementById("sort").value;
+  const p100=r=>{const{total,w}=compute(r);return {k:w?total.k/w*100:0,p:w?total.p/w*100:0};};
+  if(s==="prot")list.sort((a,b)=>p100(b).p-p100(a).p);
+  else if(s==="calLow")list.sort((a,b)=>p100(a).k-p100(b).k);
+  else if(s==="calHigh")list.sort((a,b)=>p100(b).k-p100(a).k);
+  else if(s==="az")list.sort((a,b)=>a.n.localeCompare(b.n,"fr"));
+  return list;
+}
+function card(r){
+  const tags=r.cats.slice(0,3).map(c=>`<span class="tag" style="background:${CATS[c].c}cc">${CATS[c].l}</span>`).join("");
+  const m=macroAt(r);
+  return `<article class="rcard" data-id="${r.id}">
+    <div class="ph"><div class="tags">${tags}</div>${r.custom?'<span class="mine">★ Ma recette</span>':''}<img src="images/${r.img}" alt="${r.n}" onerror="this.src='images/hero.png'"></div>
+    <div class="rbody">
+      <h3>${r.n}</h3><div class="meta">${r.t} · pot ${m.w} g</div>
+      <div class="macros">
+        <div class="macro"><b>${m.kcal}</b><span>kcal</span></div>
+        <div class="macro"><b>${m.prot}</b><span>prot</span></div>
+        <div class="macro"><b>${m.gluc}</b><span>gluc</span></div>
+        <div class="macro"><b>${m.lip}</b><span>lip</span></div>
+      </div>
+      <div class="basis-note">valeurs pour <b>${basisLabel(m.w)}</b></div>
+      <div class="openhint">Voir / éditer la recette →</div>
+    </div></article>`;
+}
+function render(){
+  const list=getFiltered();
+  document.getElementById("stCount").textContent=RECIPES.length;
+  countEl.textContent=`${list.length} recette${list.length>1?"s":""}`+(activeCats.size?` · ${[...activeCats].map(c=>CATS[c].l).join(", ")}`:"");
+  grid.innerHTML=list.length?list.map(card).join(""):`<div class="empty" style="grid-column:1/-1"><div class="big">🍨</div>Aucune recette ne correspond.</div>`;
+}
+
+/* ============ MODAL ============ */
+const overlay=document.getElementById("overlay"),modal=document.getElementById("modal");
+let modalLang="fr"; // 'fr' | 'us'
+let draft=null;     // edit draft
+
+function openModal(id){
+  const r=RECIPES.find(x=>x.id===id);if(!r)return;
+  draft=null;modalLang="fr";
+  renderView(r);
+  overlay.classList.add("open");document.body.classList.add("noscroll");
+}
+function closeModal(){overlay.classList.remove("open");document.body.classList.remove("noscroll");draft=null;}
+
+function ingLine(i,lang){
+  const name=lang==="fr"?i.fr:i.name;
+  const swap=(lang==="fr"&&i.fr!==i.name)?`<span class="swap">↔ ${i.name}</span>`:"";
+  return `<li><span>${name} ${swap}</span><span class="q">${(+i.g||0)} ${i.u}</span></li>`;
+}
+function renderView(r){
+  const {total,w}=compute(r);
+  const per100=w?{k:Math.round(total.k/w*100),p:+(total.p/w*100).toFixed(1),c:+(total.c/w*100).toFixed(1),l:+(total.l/w*100).toFixed(1)}:{k:0,p:0,c:0,l:0};
+  const tags=r.cats.map(c=>`<span class="tag" style="background:${CATS[c].c}cc">${CATS[c].l}</span>`).join("");
+  const lang=modalLang;
+  modal.innerHTML=`
+    <div class="m-hero">
+      <img src="images/${r.img}" alt="${r.n}" onerror="this.src='images/hero.png'"><div class="grad"></div>
+      <div class="m-tags">${tags}</div>
+      <button class="m-close" data-act="close">✕</button>
+      <h2>${r.n}</h2>
+    </div>
+    <div class="mtabs">
+      <button class="mtab ${lang==='fr'?'on':''}" data-lang="fr">🇫🇷 Version France</button>
+      <button class="mtab ${lang==='us'?'on':''}" data-lang="us">🇺🇸 Recette originale</button>
+    </div>
+    <div class="m-body">
+      <div class="m-meta">⚙️ <b>${r.set||"—"}</b> · ${r.t||""} ${r.src?`· 📺 ${r.src}`:""}</div>
+      <div class="nutri">
+        <div class="box2"><div class="h">Pot entier (${w} g)</div><div class="nrow">
+          <div><b>${total.k}</b><span>kcal</span></div><div><b>${total.p}</b><span>prot</span></div><div><b>${total.c}</b><span>gluc</span></div><div><b>${total.l}</b><span>lip</span></div></div></div>
+        <div class="box2"><div class="h">Pour 100 g</div><div class="nrow">
+          <div><b>${per100.k}</b><span>kcal</span></div><div><b>${per100.p}</b><span>prot</span></div><div><b>${per100.c}</b><span>gluc</span></div><div><b>${per100.l}</b><span>lip</span></div></div></div>
+      </div>
+      <div class="goal">
+        <div class="h">🎯 Objectif inverse</div>
+        <div class="desc">Tu vises une quantité précise ? Je calcule la portion à manger.</div>
+        <div class="goal-row">
+          <span style="font-size:.86rem">Je veux</span>
+          <input id="goal-val" type="number" min="1" placeholder="40">
+          <select id="goal-macro">
+            <option value="prot">g de protéines</option>
+            <option value="kcal">kcal</option>
+            <option value="gluc">g de glucides</option>
+            <option value="lip">g de lipides</option>
+          </select>
+          <button class="btn sm" data-act="calcGoal">Calculer</button>
+        </div>
+        <div id="goal-out" class="goal-out"></div>
+      </div>
+      <h4>Ingrédients</h4>
+      <ul class="ilist">${r.ing.map(i=>ingLine(i,lang)).join("")}</ul>
+      ${r.mix&&r.mix.length?`<h4>Mix-ins</h4><ul class="ilist">${r.mix.map(i=>ingLine(i,lang)).join("")}</ul>`:""}
+      <h4>Préparation</h4>
+      <ol class="steps">${(r.steps||[]).map(s=>`<li>${s}</li>`).join("")}</ol>
+    </div>
+    <div class="m-foot">
+      <button class="btn danger sm" data-act="delete" ${r.custom?"":""}>🗑 Supprimer</button>
+      <button class="btn ghost" data-act="close">Fermer</button>
+      <button class="btn" data-act="edit">✏️ Éditer</button>
+    </div>`;
+  modal._rid=r.id;
+}
+
+/* ----- EDIT MODE ----- */
+function startEdit(r){
+  draft=JSON.parse(JSON.stringify(r));
+  renderEdit();
+}
+function startCreate(){
+  draft={id:nextId(),custom:true,n:"",cats:[],img:"vanilla.png",t:"1 pint · 24h",set:"",src:"Ma recette",
+    ing:[{name:"",fr:"",u:"g",cat:"",g:100,p:{k:0,p:0,c:0,l:0}}],mix:[],steps:[""]};
+  renderEdit(true);
+  overlay.classList.add("open");document.body.classList.add("noscroll");
+}
+function ingRow(i,arr,idx){
+  return `<div class="edrow" data-arr="${arr}" data-idx="${idx}">
+    <div class="r1">
+      <div class="nm"><input type="text" class="ing-name field" placeholder="Ingrédient…" value="${(i.name||"").replace(/"/g,'&quot;')}" autocomplete="off"><div class="ac"></div></div>
+      <input type="number" class="qty ing-g" value="${i.g}" min="0" step="1">
+      <input type="text" class="un ing-u" value="${i.u}" maxlength="3">
+      <button class="rm" data-rm>✕</button>
+    </div>
+    <div class="r2">
+      <div class="mc"><input type="number" class="ing-k" value="${i.p.k}" step="1"><span class="mcl">kcal/100</span></div>
+      <div class="mc"><input type="number" class="ing-p" value="${i.p.p}" step="0.1"><span class="mcl">prot</span></div>
+      <div class="mc"><input type="number" class="ing-c" value="${i.p.c}" step="0.1"><span class="mcl">gluc</span></div>
+      <div class="mc"><input type="number" class="ing-l" value="${i.p.l}" step="0.1"><span class="mcl">lip</span></div>
+    </div>
+  </div>`;
+}
+function renderEdit(isNew){
+  const d=draft;
+  const catChecks=Object.keys(CATS).map(c=>`<button type="button" class="cpill ${d.cats.includes(c)?'on':''}" data-catpick="${c}" style="--c:${CATS[c].c}"><span class="cdot"></span>${CATS[c].l}</button>`).join("");
+  modal.innerHTML=`
+    <div class="m-hero" style="height:120px">
+      <img src="images/${d.img}" alt="" onerror="this.src='images/hero.png'"><div class="grad"></div>
+      <button class="m-close" data-act="${isNew?'close':'cancel'}">✕</button>
+      <h2>${isNew?"Nouvelle recette":"Éditer"}</h2>
+    </div>
+    <div class="m-body ed">
+      <label>Nom</label><input type="text" id="ed-n" value="${(d.n||"").replace(/"/g,'&quot;')}" placeholder="Nom de la recette">
+      <label>Catégories</label><div class="catbox" id="ed-cats">${catChecks}</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div style="flex:1;min-width:140px"><label>Temps</label><input type="text" id="ed-t" value="${(d.t||"").replace(/"/g,'&quot;')}" placeholder="1 pint · 24h"></div>
+        <div style="flex:1;min-width:140px"><label>Image</label><select class="field" id="ed-img"></select></div>
+      </div>
+      <label>Réglage machine</label><input type="text" id="ed-set" value="${(d.set||"").replace(/"/g,'&quot;')}" placeholder="ex. Lite Ice Cream + Re-spin">
+
+      <label>Ingrédients <span style="font-weight:400;text-transform:none;color:var(--muted)">— choisis dans la liste (macros auto) ou saisis les tiennes</span></label>
+      <div id="ed-ing">${d.ing.map((i,x)=>ingRow(i,"ing",x)).join("")}</div>
+      <button class="btn ghost sm" data-add="ing">+ Ajouter un ingrédient</button>
+
+      <label>Mix-ins</label>
+      <div id="ed-mix">${d.mix.map((i,x)=>ingRow(i,"mix",x)).join("")}</div>
+      <button class="btn ghost sm" data-add="mix">+ Ajouter un mix-in</button>
+
+      <div class="sugg" id="ed-sugg"></div>
+
+      <label>Préparation (une étape par ligne)</label>
+      <textarea id="ed-steps" rows="6">${(d.steps||[]).join("\n")}</textarea>
+
+      <div class="nutri" id="ed-nutri" style="margin-top:18px"></div>
+    </div>
+    <div class="m-foot">
+      ${isNew?'':'<button class="btn danger sm" data-act="delete">🗑 Supprimer</button>'}
+      <button class="btn ghost" data-act="${isNew?'close':'cancel'}">Annuler</button>
+      <button class="btn" data-act="save">💾 Enregistrer</button>
+    </div>`;
+  // image select options
+  const imgs=["vanilla.png","recipe1-strawberry.png","recipe2-chocolate.png","recipe3-cookiedough.png","recipe4-smores.png","recipe5-mango.png","recipe6-watermelon.png","peanutbutter.png","brownie.png","birthdaycake.png","banana.png","coffee.png","cookiescream.png","coconut.png","applecaramel.png","hero.png"];
+  const sel=modal.querySelector("#ed-img");
+  sel.innerHTML=imgs.map(im=>`<option value="${im}" ${im===d.img?"selected":""}>${im.replace(".png","")}</option>`).join("");
+  refreshEditNutri();refreshSugg();
+}
+function collectStepsFromTextarea(){const ta=modal.querySelector("#ed-steps");if(ta)draft.steps=ta.value.split("\n").map(s=>s.trim()).filter(Boolean);}
+function refreshEditNutri(){
+  const {total,w}=compute(draft);
+  const per100=w?{k:Math.round(total.k/w*100),p:+(total.p/w*100).toFixed(1),c:+(total.c/w*100).toFixed(1),l:+(total.l/w*100).toFixed(1)}:{k:0,p:0,c:0,l:0};
+  const el=modal.querySelector("#ed-nutri");if(!el)return;
+  el.innerHTML=`
+    <div class="box2"><div class="h">Pot entier (${w} g) — recalculé</div><div class="nrow">
+      <div><b>${total.k}</b><span>kcal</span></div><div><b>${total.p}</b><span>prot</span></div><div><b>${total.c}</b><span>gluc</span></div><div><b>${total.l}</b><span>lip</span></div></div></div>
+    <div class="box2"><div class="h">Pour 100 g</div><div class="nrow">
+      <div><b>${per100.k}</b><span>kcal</span></div><div><b>${per100.p}</b><span>prot</span></div><div><b>${per100.c}</b><span>gluc</span></div><div><b>${per100.l}</b><span>lip</span></div></div></div>`;
+}
+function refreshSugg(){
+  const el=modal.querySelector("#ed-sugg");if(!el)return;
+  const valid=draft.ing.filter(i=>i.name&&(+i.g>0));
+  if(valid.length<1){el.innerHTML=`<div class="sh">💡 Préparation suggérée</div><div style="font-size:.84rem;color:var(--muted)">Ajoute des ingrédients : je déduis le réglage et les étapes adaptés.</div>`;return;}
+  const s=suggestPrep(valid,draft.mix.filter(i=>i.name&&+i.g>0));
+  el.innerHTML=`<div class="sh">💡 Préparation suggérée ${s.onlyFruit?"· profil sorbet":s.vegan?"· profil vegan":""}</div>
+    <div class="sset">Réglage conseillé : <b>${s.set}</b></div>
+    <ol>${s.steps.map(x=>`<li>${x}</li>`).join("")}</ol>
+    <button class="btn ghost sm" data-act="applySugg">Appliquer cette préparation</button>`;
+}
+
+/* ----- autocomplete ----- */
+function showAC(row,q){
+  const ac=row.querySelector(".ac");
+  const ql=q.trim().toLowerCase();
+  if(!ql){ac.classList.remove("show");return;}
+  const matches=ING_LIST.filter(i=>i.n.toLowerCase().includes(ql)||i.fr.toLowerCase().includes(ql)).slice(0,8);
+  if(!matches.length){ac.classList.remove("show");return;}
+  ac.innerHTML=matches.map(m=>`<div data-k="${m.k}">${m.n}<small>🇫🇷 ${m.fr} · ${m.p.k} kcal/100${m.u} · ${m.p.p}g prot</small></div>`).join("");
+  ac.classList.add("show");
+}
+function applyIngFromLib(row,k){
+  const arr=row.dataset.arr,idx=+row.dataset.idx,b=ING[k];
+  draft[arr][idx]={name:b.n,fr:b.fr,u:b.u,cat:b.cat,g:draft[arr][idx].g||100,p:{...b.p}};
+  // re-render just this section to refresh inputs
+  rerenderRows(arr);refreshEditNutri();refreshSugg();
+}
+function rerenderRows(arr){
+  const cont=modal.querySelector(arr==="ing"?"#ed-ing":"#ed-mix");
+  cont.innerHTML=draft[arr].map((i,x)=>ingRow(i,arr,x)).join("");
+}
+
+/* ----- modal events ----- */
+overlay.addEventListener("click",e=>{if(e.target===overlay)closeModal();});
+modal.addEventListener("click",e=>{
+  const t=e.target;
+  const langBtn=t.closest("[data-lang]");
+  if(langBtn){modalLang=langBtn.dataset.lang;renderView(RECIPES.find(r=>r.id===modal._rid));return;}
+  const act=t.closest("[data-act]")?.dataset.act;
+  if(act==="close"){closeModal();return;}
+  if(act==="cancel"){renderView(RECIPES.find(r=>r.id===modal._rid));return;}
+  if(act==="edit"){startEdit(RECIPES.find(r=>r.id===modal._rid));return;}
+  if(act==="delete"){
+    const id=modal._rid||draft?.id;
+    if(confirm("Supprimer cette recette ?")){RECIPES=RECIPES.filter(r=>r.id!==id);save();closeModal();render();}
+    return;
+  }
+  if(act==="applySugg"){
+    collectStepsFromTextarea();
+    const valid=draft.ing.filter(i=>i.name&&+i.g>0);
+    const s=suggestPrep(valid,draft.mix.filter(i=>i.name&&+i.g>0));
+    draft.set=s.set;draft.steps=s.steps;
+    renderEdit(modal._rid?false:true); // re-render keeps draft
+    return;
+  }
+  if(act==="calcGoal"){
+    const r=RECIPES.find(x=>x.id===modal._rid);if(!r)return;
+    const macro=modal.querySelector("#goal-macro").value, val=+modal.querySelector("#goal-val").value;
+    const out=modal.querySelector("#goal-out");
+    if(!val||val<=0){out.innerHTML="<span style='color:#b03f5a'>Entre une valeur cible.</span>";return;}
+    const res=reverseGoal(r,macro,val);
+    if(!res){out.innerHTML="<span style='color:#b03f5a'>Cette recette ne contient pas assez de ce nutriment pour calculer une portion.</span>";return;}
+    const lbl={prot:'g de protéines',kcal:'kcal',gluc:'g de glucides',lip:'g de lipides'}[macro];
+    out.innerHTML=`Pour <b>${val} ${lbl}</b> → mange <b>${res.grams} g</b> (≈ ${res.portions} pot).
+      <div class="gmacros"><span>${res.k} kcal</span><span>${res.p} g prot</span><span>${res.c} g gluc</span><span>${res.l} g lip</span></div>`;
+    return;
+  }
+  if(act==="save"){saveDraft();return;}
+  // add ingredient/mix
+  const add=t.closest("[data-add]")?.dataset.add;
+  if(add){collectStepsFromTextarea();draft[add].push({name:"",fr:"",u:add==="mix"?"g":"g",cat:"",g:add==="mix"?20:100,p:{k:0,p:0,c:0,l:0}});rerenderRows(add);refreshEditNutri();refreshSugg();return;}
+  // remove row
+  if(t.closest("[data-rm]")){
+    const row=t.closest(".edrow");const arr=row.dataset.arr,idx=+row.dataset.idx;
+    collectStepsFromTextarea();draft[arr].splice(idx,1);rerenderRows(arr);refreshEditNutri();refreshSugg();return;
+  }
+  // category pick
+  const cp=t.closest("[data-catpick]");
+  if(cp){const c=cp.dataset.catpick;const i=draft.cats.indexOf(c);if(i>=0)draft.cats.splice(i,1);else draft.cats.push(c);cp.classList.toggle("on");return;}
+  // autocomplete item
+  const acItem=t.closest(".ac div");
+  if(acItem){const row=t.closest(".edrow");applyIngFromLib(row,acItem.dataset.k);return;}
+});
+modal.addEventListener("input",e=>{
+  const t=e.target,row=t.closest(".edrow");
+  if(row){
+    const arr=row.dataset.arr,idx=+row.dataset.idx,o=draft[arr][idx];
+    if(t.classList.contains("ing-name")){o.name=t.value;if(!o.fr||o.fr===""){}o.fr=o.fr||t.value;showAC(row,t.value);}
+    else if(t.classList.contains("ing-g")){o.g=+t.value||0;}
+    else if(t.classList.contains("ing-u")){o.u=t.value;}
+    else if(t.classList.contains("ing-k")){o.p.k=+t.value||0;}
+    else if(t.classList.contains("ing-p")){o.p.p=+t.value||0;}
+    else if(t.classList.contains("ing-c")){o.p.c=+t.value||0;}
+    else if(t.classList.contains("ing-l")){o.p.l=+t.value||0;}
+    refreshEditNutri();refreshSugg();
+  }
+  if(t.id==="ed-n")draft.n=t.value;
+  if(t.id==="ed-t")draft.t=t.value;
+  if(t.id==="ed-set")draft.set=t.value;
+  if(t.id==="ed-img")draft.img=t.value;
+});
+modal.addEventListener("change",e=>{if(e.target.id==="ed-img"){draft.img=e.target.value;}});
+document.addEventListener("click",e=>{if(!e.target.closest(".nm")){modal.querySelectorAll(".ac.show").forEach(a=>a.classList.remove("show"));}});
+
+function saveDraft(){
+  collectStepsFromTextarea();
+  if(!draft.n.trim()){alert("Donne un nom à la recette.");return;}
+  // clean empty ingredients
+  draft.ing=draft.ing.filter(i=>i.name&&+i.g>0).map(i=>({...i,fr:i.fr||i.name}));
+  draft.mix=draft.mix.filter(i=>i.name&&+i.g>0).map(i=>({...i,fr:i.fr||i.name}));
+  if(!draft.ing.length){alert("Ajoute au moins un ingrédient.");return;}
+  draft.custom=true;
+  const idx=RECIPES.findIndex(r=>r.id===draft.id);
+  if(idx>=0)RECIPES[idx]=draft;else RECIPES.push(draft);
+  save();
+  const id=draft.id;draft=null;
+  render();
+  openModal(id);
+}
+
+/* ============ GRID / TOOLBAR EVENTS ============ */
+grid.addEventListener("click",e=>{const c=e.target.closest(".rcard");if(c)openModal(+c.dataset.id);});
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("sort").addEventListener("change",render);
+document.getElementById("newRecipe").addEventListener("click",startCreate);
+document.getElementById("resetRecipes").addEventListener("click",()=>{
+  if(confirm("Restaurer les 27 recettes d'origine ? Tes recettes perso et modifications seront perdues.")){
+    localStorage.removeItem(LS_KEY);RECIPES=expand();render();
+  }
+});
+document.getElementById("exportR").addEventListener("click",()=>{
+  const blob=new Blob([JSON.stringify(RECIPES,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="mes-recettes-creami.json";
+  document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+});
+document.getElementById("importR").addEventListener("click",()=>document.getElementById("importFile").click());
+document.getElementById("importFile").addEventListener("change",e=>{
+  const f=e.target.files[0];if(!f)return;const rd=new FileReader();
+  rd.onload=()=>{
+    try{
+      const data=JSON.parse(rd.result);
+      if(!Array.isArray(data)||!data.length||!data[0].n||!data[0].ing)throw 0;
+      if(confirm(`Importer ${data.length} recette(s) ? La liste actuelle sera remplacée.`)){
+        let mid=0;RECIPES=data.map(r=>({...r,id:++mid}));save();render();alert("Recettes importées ✓");
+      }
+    }catch(err){alert("Fichier invalide : ce n'est pas un export de recettes Creami.");}
+    e.target.value="";
+  };
+  rd.readAsText(f);
+});
+catPills.addEventListener("click",e=>{
+  const b=e.target.closest(".cpill");if(!b)return;const cat=b.dataset.cat;
+  if(cat===""){activeCats.clear();}else{activeCats.has(cat)?activeCats.delete(cat):activeCats.add(cat);}
+  catPills.querySelector(".all").classList.toggle("on",activeCats.size===0);
+  catPills.querySelectorAll(".cpill:not(.all)").forEach(p=>p.classList.toggle("on",activeCats.has(p.dataset.cat)));
+  render();
+});
+const customInput=document.getElementById("customG");
+document.querySelector(".basis-bar").addEventListener("click",e=>{
+  const b=e.target.closest(".bpill");if(!b)return;basis=b.dataset.b;
+  document.querySelectorAll(".bpill").forEach(p=>p.classList.toggle("on",p===b));
+  customInput.style.display=basis==="custom"?"inline-block":"none";
+  if(basis==="custom"){customInput.focus();customG=+customInput.value||100;}
+  render();
+});
+customInput.addEventListener("input",()=>{customG=+customInput.value||0;if(basis==="custom")render();});
+
+/* ============ TABS ============ */
+function go(tab){
+  document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+  document.querySelectorAll("#tabs button").forEach(b=>b.classList.remove("active"));
+  document.getElementById(tab).classList.add("active");
+  document.querySelector(`#tabs button[data-tab="${tab}"]`).classList.add("active");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+document.getElementById("tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(b)go(b.dataset.tab);});
+document.querySelectorAll("[data-go]").forEach(c=>c.addEventListener("click",()=>go(c.dataset.go)));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&overlay.classList.contains("open"))closeModal();});
+
+render();
+</script>
+</body>
+</html>
