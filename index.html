@@ -70,10 +70,13 @@ h2.title{font-size:2rem;font-weight:600;line-height:1.15;margin-bottom:6px;lette
 .home-card .ic{font-size:1.6rem}
 .home-card h3{font-size:1.1rem;margin:10px 0 4px;font-weight:600}
 .home-card p{font-size:.86rem;color:var(--muted)}
-.src-list{margin-top:30px;background:var(--cream-2);border-radius:var(--radius);padding:22px 26px}
-.src-list h3{font-size:1rem;margin-bottom:10px}
-.src-list li{font-size:.88rem;color:#5d5044;margin:6px 0;list-style:none;padding-left:18px;position:relative}
-.src-list li::before{content:'▸';position:absolute;left:0;color:var(--rose)}
+.community{margin-top:30px;background:linear-gradient(135deg,var(--rose-lt),var(--cream-2));border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px;box-shadow:0 12px 30px -22px rgba(120,70,80,.4)}
+.community h3{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;color:var(--ink);margin-bottom:14px}
+.community ul{list-style:none;margin:0 0 18px}
+.community li{font-size:.95rem;color:#5d5044;margin:9px 0;padding-left:26px;position:relative}
+.community li::before{content:'🍦';position:absolute;left:0;font-size:.95rem}
+.community li b{color:var(--rose-dk);font-weight:600}
+.stay-tune{display:inline-block;background:var(--rose);color:#fff;font-weight:700;font-size:.82rem;letter-spacing:.04em;padding:8px 16px;border-radius:30px;box-shadow:0 8px 18px -8px var(--rose)}
 
 .feat-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin:8px 0 26px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
@@ -329,10 +332,14 @@ footer{max-width:1180px;margin:0 auto;padding:30px 22px;color:var(--muted);font-
       <div class="home-card" data-go="fr"><div class="ic">🇫🇷</div><h3>Équivalents</h3><p>Toutes les marques US et par quoi les remplacer en France.</p></div>
     </div>
   </section>
-  <div class="src-list">
-    <p>N'hésitez pas à ajouter vos créations et meilleures recettes</p>
-    <p>Bientôt un système de vote pour une nouvelle catégorisation des contenus</p>
-    <p>Stay tune Bitches !</p>
+  <div class="community">
+    <div class="eyebrow">La communauté</div>
+    <h3>Le guide grandit avec vous 🍨</h3>
+    <ul>
+      <li>N'hésitez pas à <b>ajouter vos créations</b> et meilleures recettes.</li>
+      <li>Bientôt un <b>système de vote</b> pour une nouvelle catégorisation des contenus.</li>
+    </ul>
+    <span class="stay-tune">Stay tune Bitches !</span>
   </div>
 </div>
 
